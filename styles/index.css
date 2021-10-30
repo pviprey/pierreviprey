@@ -1,0 +1,196 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*==========================================================================*/
+
+
+header{
+    padding-bottom: 30px;
+}
+/*  *   *   *   *   *   *   *   *   *   *   *   *   *
+                Gestion des différents liens
+*   *   *   *   *   *   *   *   *   *   *   *   *   */
+
+#liens{
+    background-color: grey;
+    width: 100%;
+    height: 70px;
+    /*margin-bottom: 100px;*/
+}
+#liens > .github{
+    position: relative;
+    display: inline-block;
+    top: 3px;
+
+    background-image: url(../images/GitHub-Mark-64px.png);
+    width: 64px;
+    height: 64px;
+
+    margin-left: 10px;
+    margin-right: 10px;
+}
+#liens > .linkedin{
+    position: relative;
+    display: inline-block;
+    top: 3px;
+
+    background-image: url(../images/LinkedIn-Mark-64px.png);
+    background-size: contain;
+    width: 64px;
+    height: 64px;
+
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/*  *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *
+                Gestion de la bannière et photo de profil
+*   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   */
+
+#banniere{
+    z-index: 0;
+    width: 100%;
+    height: 200px;
+}
+
+.line{
+    position: relative;    
+    z-index: 1;
+    background-image: linear-gradient(to right, #6A6B6E, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 50%, #6A6B6E);
+    background-repeat: no-repeat;
+    background-size: 100% 5px;
+    background-position: bottom 60px center;
+}
+.line > img#pdp{
+    position: relative;
+
+    width: 250px;
+    height: 250px;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    border-style: solid;
+    border-color: #6A6B6E;
+    border-width: 5px;
+    border-radius: 100%;
+}
+
+/*  *   *   *   *   *   *   *   *   *   *   *   *   *
+                Gestion de l'entête
+*   *   *   *   *   *   *   *   *   *   *   *   *   */
+
+#entete{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    width: auto;    
+}
+#entete p{
+    color: rgb(59, 89, 152);
+}
+#entete > #NOMPrenom{
+    text-align: center;
+    width: 100%;
+    font-size: 60px;
+    margin: 10px 0px 50px 0px;
+}
+#entete p+p{
+    margin-top: 20px;
+}
+#entete #adresse::before{
+    content: "Adresse: ";
+}
+#entete > .left, #entete > .right{
+    text-align: center;
+    width: 50%;
+}
+
+
+
+main div{
+    padding: 20px 0px;
+}
+main>div:nth-child(2n+1){
+    background-color:rgb(59, 89, 152);
+    color: white;
+}
+main>div:nth-child(2n){
+    background-color: white;
+    color: rgb(59, 89, 152);
+}
+main > div > h1{
+    font-weight: bold;
+    font-size: 60px;
+    text-decoration: underline;
+    margin-bottom: 20px;
+}
+/*  *   *   *   *   *   *   *   *   *   *   *   *   *
+                Gestion de la bio
+*   *   *   *   *   *   *   *   *   *   *   *   *   */
+
+#bio .quote::before{
+    content: "« ";
+}
+#bio .quote::after{
+    content: " »";
+}
+#bio .quote{
+    text-align: center;
+    margin: 0px 200px;
+    font-size: 25px;
+    font-style: italic;
+}
+
+/*  *   *   *   *   *   *   *   *   *   *   *   *   *
+                Gestion de mes projets
+*   *   *   *   *   *   *   *   *   *   *   *   *   */
