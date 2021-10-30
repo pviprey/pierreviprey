@@ -194,3 +194,21 @@ main > div > h1{
 /*  *   *   *   *   *   *   *   *   *   *   *   *   *
                 Gestion de mes projets
 *   *   *   *   *   *   *   *   *   *   *   *   *   */
+#projet #limit{
+    padding: 0;
+    margin: auto;
+    display: block;  
+    width: 90vw;
+    height:70vh;
+    border: 2px solid black;
+    border-radius: 25px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+#projet canvas{
+    background-color: burlywood;
+    border-radius: 25px;
+    cursor: grab;
+    height: 100%;
+    width: 200%;
+}
