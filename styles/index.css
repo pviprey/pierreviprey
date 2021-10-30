@@ -206,7 +206,6 @@ main > div > h1{
     overflow: hidden;
 }
 #projet canvas{
-    background-color: burlywood;
     border-radius: 25px;
     cursor: grab;
     height: 100%;
