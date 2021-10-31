@@ -211,3 +211,26 @@ main > div > h1{
     height: 100%;
     width: 200%;
 }
+#projet p{
+    display: flex;
+    margin-top: 10px;
+    margin-left: 5vw;
+}
+#projet p::before{
+    content: "";
+    margin-right: 5px;
+    width: 30px;
+    height: 30px;
+}
+#projet #blue::before{
+    background-color: blue;
+}
+#projet #purple::before{
+    background-color: purple;
+}
+#projet #red::before{
+    background-color: red;
+}
+#projet #orange::before{
+    background-color: orange;
+}
