@@ -48,6 +48,9 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+p{
+    text-justify: auto;
+}
 
 /*==========================================================================*/
 
@@ -58,7 +61,6 @@ header{
 /*  *   *   *   *   *   *   *   *   *   *   *   *   *
                 Gestion des différents liens
 *   *   *   *   *   *   *   *   *   *   *   *   *   */
-
 #liens{
     background-color: grey;
     width: 100%;
@@ -91,10 +93,10 @@ header{
     margin-right: 10px;
 }
 
+
 /*  *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *
                 Gestion de la bannière et photo de profil
 *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   */
-
 #banniere{
     z-index: 0;
     width: 100%;
@@ -119,21 +121,19 @@ header{
     margin-left: auto;
     margin-right: auto;
 
-    border-style: solid;
-    border-color: #6A6B6E;
-    border-width: 5px;
+    border: 5px solid #6A6B6E;
     border-radius: 100%;
 }
+
 
 /*  *   *   *   *   *   *   *   *   *   *   *   *   *
                 Gestion de l'entête
 *   *   *   *   *   *   *   *   *   *   *   *   *   */
-
 #entete{
     display: flex;
     flex-wrap: wrap;
     align-content: space-around;
-    width: auto;    
+    width: auto;
 }
 #entete p{
     color: rgb(59, 89, 152);
@@ -150,34 +150,44 @@ header{
 #entete #adresse::before{
     content: "Adresse: ";
 }
-#entete > .left, #entete > .right{
+#entete > aside{
     text-align: center;
     width: 50%;
 }
 
 
-
-main div{
+/*  *   *   *   *   *   *   *   *   *   *   *   *   *
+                    Gestion du main
+*   *   *   *   *   *   *   *   *   *   *   *   *   */
+main > div{
     padding: 20px 0px;
 }
-main>div:nth-child(2n+1){
+main > div:nth-child(2n+1){
     background-color:rgb(59, 89, 152);
     color: white;
 }
-main>div:nth-child(2n){
+main > div:nth-child(2n){
     background-color: white;
     color: rgb(59, 89, 152);
 }
-main > div > h1{
+main > div h1{
     font-weight: bold;
     font-size: 60px;
     text-decoration: underline;
     margin-bottom: 20px;
 }
+main > div h2{
+    font-weight: bold;
+    font-size: 40px;
+    text-decoration: underline;
+    margin-left: 40px;
+    margin-bottom: 13px;
+}
+
+
 /*  *   *   *   *   *   *   *   *   *   *   *   *   *
                 Gestion de la bio
 *   *   *   *   *   *   *   *   *   *   *   *   *   */
-
 #bio .quote::before{
     content: "« ";
 }
@@ -190,6 +200,7 @@ main > div > h1{
     font-size: 25px;
     font-style: italic;
 }
+
 
 /*  *   *   *   *   *   *   *   *   *   *   *   *   *
                 Gestion de mes projets
@@ -233,4 +244,43 @@ main > div > h1{
 }
 #projet #orange::before{
     background-color: orange;
+}
+
+
+/*  *   *   *   *   *   *   *   *   *   *   *   *   *
+                Gestion de mes compétences
+*   *   *   *   *   *   *   *   *   *   *   *   *   */
+#competence{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    width: auto;
+    height: auto;
+}
+#competence > h1{
+    width: 100%;
+}
+#competence > div{
+    padding-right: 40px;
+    border-right: 2px dotted white;
+}
+#competence > div:last-child{
+    padding: 0px;
+    border-right: none;
+}
+#competence ul > li{
+    margin-left: 80px;
+    margin-bottom: 5px;
+    list-style-type: circle;
+}
+
+
+/*  *   *   *   *   *   *   *   *   *   *   *   *   *
+                Gestion de mes intérets
+*   *   *   *   *   *   *   *   *   *   *   *   *   */
+#interet p{
+    padding: 0px 40px;
+}
+#interet p+p{
+    padding-top: 10px;
 }

@@ -1,7 +1,7 @@
 "use strict";
 
 const START_YEAR = 2014;
-const NOM_YEAR = new Date().getFullYear();
+const NUM_YEAR = new Date().getFullYear();
 
 class Coord{
     constructor(x, y){
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const HEIGHT = canvas.height = limite.offsetHeight;
     let ctx = canvas.getContext("2d");
 
-    let size_year = WIDTH/9;
+    let size_year = WIDTH/(NUM_YEAR-START_YEAR+2);
 
     $(canvas).draggable({
         axis: 'x',
@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function() {
     //LesJosettes: Avril 2021 -> Now
     tab_exp.push(new Experience(1, "orange", new Date(2021, 3), new Date()));
     
-    for(let i = 0; i < 9; i++){
+    for(let i = 0; i < NUM_YEAR-START_YEAR+2; i++){
         let year = START_YEAR + i;
         ctx.textAlign = "center";
         ctx.fillStyle = "black";
@@ -91,13 +91,14 @@ document.addEventListener("DOMContentLoaded", function() {
         let monthEnd = event.dateEnd.getMonth();
         let yearEnd = event.dateEnd.getFullYear();
         let positionEnd = new Coord(size_year/2 + (yearEnd - START_YEAR)*size_year + monthEnd/11*size_year, HEIGHT/2 + 40*event.index);
+        if(event.dateEnd == Date()){
+            positionEnd.x -=size/2;
+        }
         ctx.lineTo(positionEnd.x, positionEnd.y);
-        
         ctx.stroke();
         ctx.closePath();
 
         if(event.dateEnd == Date()){
-            console.log("oui");
             ctx.beginPath();
             ctx.fillStyle = event.color;
             ctx.lineWidth = 1;
