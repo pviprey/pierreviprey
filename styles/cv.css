@@ -1,3 +1,8 @@
+:root{
+    --blue: rgb(59, 89, 152);;
+    --transparent-blue: rgba(59, 89, 152, 0);
+}
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -57,6 +62,9 @@ p{
 
 /*==========================================================================*/
 
+a{
+    font-style: italic;
+}
 
 header{
     padding-bottom: 30px;
@@ -65,17 +73,16 @@ header{
                 Gestion des différents liens
 *   *   *   *   *   *   *   *   *   *   *   *   *   */
 #liens{
-    background-color: grey;
+    background-color: var(--blue);
     width: 100%;
     height: 70px;
-    /*margin-bottom: 100px;*/
 }
 #liens > .github{
     position: relative;
     display: inline-block;
     top: 3px;
 
-    background-image: url(../images/GitHub-Mark-64px.png);
+    background-image: url(../images/GitHub-Mark-Light-64px.png);
     width: 64px;
     height: 64px;
 
@@ -105,17 +112,27 @@ header{
     width: 100%;
     height: 200px;
 }
+#banniere > img{
+    position: relative;
+    object-fit: none; /* Do not scale the image */
+    object-position: center; /* Center the image within the element */
+    background-size: cover;
+    z-index: 0;
+    width: 100%;
+    height: 400px;
+}
 
 .line{
     position: relative;    
     z-index: 1;
-    background-image: linear-gradient(to right, #6A6B6E, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 50%, #6A6B6E);
+    background-image: linear-gradient(to right, var(--transparent-blue), var(--blue), var(--blue), var(--transparent-blue));
     background-repeat: no-repeat;
-    background-size: 100% 5px;
+    background-size: 100% 10px;
     background-position: bottom 60px center;
 }
 .line > img#pdp{
     position: relative;
+    z-index: 0;
 
     width: 250px;
     height: 250px;
@@ -124,7 +141,7 @@ header{
     margin-left: auto;
     margin-right: auto;
 
-    border: 5px solid #6A6B6E;
+    border: 10px solid var(--blue);
     border-radius: 100%;
 }
 
@@ -139,7 +156,7 @@ header{
     width: auto;
 }
 #entete p{
-    color: rgb(59, 89, 152);
+    color: var(--blue);
 }
 #entete > #NOMPrenom{
     text-align: center;
@@ -150,8 +167,8 @@ header{
 #entete p + p{
     margin-top: 20px;
 }
-#entete #mail{
-    text-decoration: none;
+#entete #mail > a{
+    color: var(--blue);
 }
 #entete > aside{
     text-align: center;
@@ -166,12 +183,12 @@ main > div{
     padding: 20px 0px;
 }
 main > div:nth-child(2n+1){
-    background-color:rgb(59, 89, 152);
+    background-color:var(--blue);
     color: white;
 }
 main > div:nth-child(2n){
     background-color: white;
-    color: rgb(59, 89, 152);
+    color: var(--blue);
 }
 main > div h1{
     font-weight: bold;
@@ -199,7 +216,7 @@ main > div h2{
 }
 #bio .quote{
     text-align: center;
-    margin: 0px 200px;
+    margin: 0px 7vw;
     font-size: 25px;
     font-style: italic;
 }
@@ -254,27 +271,26 @@ main > div h2{
 /*  *   *   *   *   *   *   *   *   *   *   *   *   *
                 Gestion de mes compétences
 *   *   *   *   *   *   *   *   *   *   *   *   *   */
-#competence{
+#competence > #responsive{
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-content: space-around;
-    width: auto;
-    height: auto;
+    /* width: auto; */
+    /* height: auto; */
 }
-#competence > h1{
-    width: 100%;
-}
-#competence > div{
+#competence > #responsive > div{
     padding-right: 40px;
     border-right: 2px dotted white;
 }
-#competence > div:last-child{
+#competence > #responsive > div:last-child{
+    max-width: 40%;
     padding: 0px;
     border-right: none;
+    margin-right: 40px;
 }
-#competence ul > li{
+#competence > #responsive ul > li{
     margin-left: 7vw;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     list-style-type: circle;
 }
 
