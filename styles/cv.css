@@ -64,10 +64,18 @@ p{
 
 a{
     font-style: italic;
+    text-decoration: 2px underline dotted;
 }
 
 header{
     padding-bottom: 30px;
+}
+
+.responsive{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-around;
 }
 /*  *   *   *   *   *   *   *   *   *   *   *   *   *
                 Gestion des différents liens
@@ -189,6 +197,12 @@ main > div:nth-child(2n){
     background-color: white;
     color: var(--blue);
 }
+main > div:nth-child(2n+1) a{
+    color: white;
+}
+main > div:nth-child(2n) a{
+    color: var(--blue);
+}
 main > div h1{
     font-weight: bold;
     font-size: 60px;
@@ -268,27 +282,39 @@ main > div h2{
 /*  *   *   *   *   *   *   *   *   *   *   *   *   *
                 Gestion de mes compétences
 *   *   *   *   *   *   *   *   *   *   *   *   *   */
-#competence > #responsive{
-    display: flex;
-    flex-wrap: nowrap;
-    align-content: space-around;
-    /* width: auto; */
-    /* height: auto; */
-}
-#competence > #responsive > div{
+#competence > .responsive > div{
     padding-right: 40px;
     border-right: 2px dotted white;
 }
-#competence > #responsive > div:last-child{
+#competence > .responsive > div:last-child{
     max-width: 40%;
     padding: 0px;
     border-right: none;
     margin-right: 40px;
 }
-#competence > #responsive ul > li{
+#competence > .responsive ul > li{
     margin-left: 7vw;
     margin-bottom: 10px;
     list-style-type: circle;
+}
+
+
+/*  *   *   *   *   *   *   *   *   *   *   *   *   *
+                Gestion de mes projets
+*   *   *   *   *   *   *   *   *   *   *   *   *   */
+#projets a{
+	margin-top: 15px;
+	background-color: var(--blue);
+	border: 2px solid var(--blue);
+	font-weight: bold;
+    display: block;
+    text-align: center;
+	color: white;
+}
+#projets a > p{
+    display: block;
+	height: 205px;
+	width: 345px;
 }
 
 
