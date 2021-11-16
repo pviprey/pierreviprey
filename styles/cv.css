@@ -77,30 +77,29 @@ header{
     width: 100%;
     height: 70px;
 }
-#liens > .github{
+#liens > a{
     position: relative;
     display: inline-block;
     top: 3px;
 
-    background-image: url(../images/GitHub-Mark-Light-64px.png);
     width: 64px;
     height: 64px;
 
     margin-left: 10px;
     margin-right: 10px;
 }
-#liens > .linkedin{
-    position: relative;
-    display: inline-block;
-    top: 3px;
-
+#liens > a.github{
+    background-image: url(../images/GitHub-Mark-Light-64px.png);
+}
+#liens > a.linkedin{
     background-image: url(../images/LinkedIn-Mark-64px.png);
     background-size: contain;
-    width: 64px;
-    height: 64px;
-
-    margin-left: 10px;
-    margin-right: 10px;
+}
+#liens > .pdf{
+    right: 0;
+    background-image: url(../images/Pdf.png);
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 
@@ -234,13 +233,11 @@ main > div h2{
     border: 2px solid black;
     border-radius: 25px;
     box-sizing: border-box;
-    overflow: hidden;
 }
 #projet canvas{
     border-radius: 25px;
-    cursor: grab;
     height: 100%;
-    width: 200%;
+    width: 100%;
 }
 #projet p{
     margin-top: 10px;

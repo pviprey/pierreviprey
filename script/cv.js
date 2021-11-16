@@ -63,13 +63,13 @@ document.addEventListener("DOMContentLoaded", function() {
         let year = START_YEAR + i;
         ctx.textAlign = "center";
         ctx.fillStyle = "black";
-        ctx.font = "15px helvetica";
+        ctx.font = "2vh helvetica";
         let position = new Coord(size_year/2+size_year*i, 20);
         ctx.fillText(year, position.x, position.y);
 
         ctx.beginPath();
         ctx.strokeStyle = "black";
-        ctx.lineWidth = "2px";
+        ctx.lineWidth = "3px";
         ctx.moveTo(position.x, position.y+10);
         ctx.lineTo(position.x, HEIGHT);
         ctx.stroke();
@@ -79,33 +79,36 @@ document.addEventListener("DOMContentLoaded", function() {
     for(let event of tab_exp){
         let size = 30;
 
-        ctx.beginPath();
-        ctx.strokeStyle = event.color;
-        ctx.lineWidth = size;
-
         let monthBegin = event.dateBegin.getMonth();
         let yearBegin = event.dateBegin.getFullYear();
         let positionBegin = new Coord(size_year/2 + (yearBegin - START_YEAR)*size_year + monthBegin/11*size_year, HEIGHT/2 + 40*event.index);
-        ctx.moveTo(positionBegin.x, positionBegin.y);
-
+        
         let monthEnd = event.dateEnd.getMonth();
         let yearEnd = event.dateEnd.getFullYear();
         let positionEnd = new Coord(size_year/2 + (yearEnd - START_YEAR)*size_year + monthEnd/11*size_year, HEIGHT/2 + 40*event.index);
-        if(event.dateEnd == Date()){
-            positionEnd.x -=size/2;
-        }
-        ctx.lineTo(positionEnd.x, positionEnd.y);
-        ctx.stroke();
-        ctx.closePath();
 
         if(event.dateEnd == Date()){
+            positionEnd.x -=size/2;
             ctx.beginPath();
             ctx.fillStyle = event.color;
-            ctx.lineWidth = 1;
-            ctx.moveTo(positionEnd.x, positionEnd.y+size/2);
-            ctx.lineTo(positionEnd.x, positionEnd.y-size/2);
+
+            ctx.moveTo(positionBegin.x, positionBegin.y+size/2);
+            ctx.lineTo(positionEnd.x, positionEnd.y+size/2);
             ctx.lineTo(positionEnd.x+size/2, positionEnd.y);
-            ctx.fill();
+            ctx.lineTo(positionEnd.x, positionEnd.y-size/2);
+            ctx.lineTo(positionBegin.x, positionBegin.y-size/2);
+
+            ctx.fill();            
+        }else{
+            ctx.beginPath();
+            ctx.strokeStyle = event.color;
+            ctx.lineWidth = size;
+
+            ctx.moveTo(positionBegin.x, positionBegin.y);
+            ctx.lineTo(positionEnd.x, positionEnd.y);
+            
+            ctx.stroke();
+            ctx.closePath();
         }
     }    
 });
