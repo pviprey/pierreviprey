@@ -236,6 +236,19 @@ main > div h2{
 
 
 /*  *   *   *   *   *   *   *   *   *   *   *   *   *
+                Gestion de à propos
+*   *   *   *   *   *   *   *   *   *   *   *   *   */
+#propos p{
+    margin-left:7vw;
+    margin-right: 7vw;
+    text-align: justify;
+}
+#propos p+p{
+    padding-top: 25px;
+}
+
+
+/*  *   *   *   *   *   *   *   *   *   *   *   *   *
                 Gestion de mes projets
 *   *   *   *   *   *   *   *   *   *   *   *   *   */
 #projet #limit{
@@ -249,6 +262,7 @@ main > div h2{
     box-sizing: border-box;
 }
 #projet canvas{
+    background-color: white;
     border-radius: 25px;
     height: 100%;
     width: 100%;
@@ -284,7 +298,7 @@ main > div h2{
 *   *   *   *   *   *   *   *   *   *   *   *   *   */
 #competence > .responsive > div{
     padding-right: 40px;
-    border-right: 2px dotted white;
+    border-right: 2px dotted var(--blue);
 }
 #competence > .responsive > div:last-child{
     max-width: 40%;
@@ -305,7 +319,7 @@ main > div h2{
 #projets a{
 	margin-top: 15px;
 	background-color: var(--blue);
-	border: 2px solid var(--blue);
+	border: 2px solid white;
 	font-weight: bold;
     display: block;
     text-align: center;
@@ -315,17 +329,4 @@ main > div h2{
     display: block;
 	height: 205px;
 	width: 345px;
-}
-
-
-/*  *   *   *   *   *   *   *   *   *   *   *   *   *
-                Gestion de à propos
-*   *   *   *   *   *   *   *   *   *   *   *   *   */
-#propos p{
-    margin-left:7vw;
-    margin-right: 7vw;
-    text-align: justify;
-}
-#propos p+p{
-    padding-top: 25px;
 }
