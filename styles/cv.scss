@@ -126,7 +126,7 @@ p + p{
 #banniere{
     z-index: 0;
     width: 100%;
-    height: 200px;
+    height: 150px;
 
     img{
         position: relative;
@@ -135,7 +135,7 @@ p + p{
         background-size: cover;
         z-index: 0;
         width: 100%;
-        height: 400px;
+        height: 350px;
     }
 }
 
@@ -288,7 +288,7 @@ main{
             box-sizing: border-box;
             
             width: 90vw;
-            height:40vh;
+            height:30vh;
 
             background-color: white;
             border: 2px solid black;
@@ -320,21 +320,22 @@ main{
     > ul{
         margin-top: 20px;
         margin-left: 2vw;
+
         li{
             list-style-type: disc;
             margin-top: 10px;
             margin-left: 5vw;
-        }
+        }       
     }
 
     li::before{
         display: inline-flex;
         content: "";
-        margin-left: -30px;
+        margin-left: -22px;
         margin-right: 5px;
-        width: 30px;
-        height: 30px;
-    }
+        width: 22px;
+        height: 22px;
+    }     
 }
 
 

@@ -63,8 +63,8 @@ document.addEventListener("DOMContentLoaded", function() {
         let year = START_YEAR + i;
         ctx.textAlign = "center";
         ctx.fillStyle = "black";
-        ctx.font = "2vh helvetica";
-        let position = new Coord(size_year/2+size_year*i, 20);
+        ctx.font = "2.4vh helvetica";
+        let position = new Coord(size_year/2+size_year*i, 25);
         ctx.fillText(year, position.x, position.y);
 
         ctx.beginPath();
