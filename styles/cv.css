@@ -34,7 +34,7 @@ footer, header, hgroup, menu, nav, section {
 
 body {
   font-family: sans-serif;
-  font-size: 30px;
+  font-size: 20px;
   line-height: 1; }
 
 h1, h2 {
@@ -71,6 +71,9 @@ header {
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around; }
+
+p + p {
+  margin-top: 10px; }
 
 /*  *   *   *   *   *   *   *   *   *   *   *   *   *
                 Gestion des différents liens
@@ -165,7 +168,7 @@ main > div {
   main > div h1 {
     margin-left: 5px;
     font-weight: bold;
-    font-size: 60px;
+    font-size: 45px;
     text-decoration: underline;
     margin-bottom: 20px; }
   main > div h2 {
@@ -187,14 +190,13 @@ main > div:nth-child(2n) {
 /*  *   *   *   *   *   *   *   *   *   *   *   *   *
                 Gestion de la bio
 *   *   *   *   *   *   *   *   *   *   *   *   *   */
-#bio .quote::before {
+#bio .quote p:first-child::before {
   content: "« "; }
-#bio .quote::after {
+#bio .quote p:last-child::after {
   content: " »"; }
 #bio .quote {
   text-align: center;
   margin: 0px 7vw;
-  font-size: 25px;
   font-style: italic; }
 
 /*  *   *   *   *   *   *   *   *   *   *   *   *   *
@@ -204,8 +206,6 @@ main > div:nth-child(2n) {
   margin-left: 7vw;
   margin-right: 7vw;
   text-align: justify; }
-  #propos p + p {
-    padding-top: 25px; }
 
 /*  *   *   *   *   *   *   *   *   *   *   *   *   *
                 Gestion de mes expériences
@@ -216,7 +216,7 @@ main > div:nth-child(2n) {
   display: block;
   box-sizing: border-box;
   width: 90vw;
-  height: 60vh;
+  height: 40vh;
   background-color: white;
   border: 2px solid black;
   border-radius: 25px; }
@@ -254,7 +254,7 @@ main > div:nth-child(2n) {
   flex-wrap: nowrap; }
   #competence .responsive > div {
     max-width: 40%;
-    padding: 15px; }
+    padding: 25px; }
   #competence .responsive > div:nth-child(2n+1) {
     background-color: var(--blue);
     color: white; }
@@ -269,8 +269,8 @@ main > div:nth-child(2n) {
   #competence .responsive > div:last-child {
     margin-right: 40px; }
   #competence .responsive ul > li {
-    margin-left: 7vw;
-    margin-top: 10px;
+    margin-left: 5vw;
+    margin-top: 20px;
     list-style-type: circle; }
   #competence .responsive h2 {
     margin: 0;
@@ -282,8 +282,8 @@ main > div:nth-child(2n) {
 #projets .responsive div {
   display: flex;
   flex-direction: column;
-  width: 345px;
-  height: 205px;
+  width: 280px;
+  height: 210px;
   margin-top: 15px;
   border: 2px solid white;
   background-color: var(--blue);
