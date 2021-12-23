@@ -77,15 +77,15 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     for(let event of tab_exp){
-        let size = 30;
+        let size = 50;
 
         let monthBegin = event.dateBegin.getMonth();
         let yearBegin = event.dateBegin.getFullYear();
-        let positionBegin = new Coord(size_year/2 + (yearBegin - START_YEAR)*size_year + monthBegin/11*size_year, HEIGHT/2 + 40*event.index);
+        let positionBegin = new Coord(size_year/2 + (yearBegin - START_YEAR)*size_year + monthBegin/11*size_year, HEIGHT/2 + (size+20)*event.index);
         
         let monthEnd = event.dateEnd.getMonth();
         let yearEnd = event.dateEnd.getFullYear();
-        let positionEnd = new Coord(size_year/2 + (yearEnd - START_YEAR)*size_year + monthEnd/11*size_year, HEIGHT/2 + 40*event.index);
+        let positionEnd = new Coord(size_year/2 + (yearEnd - START_YEAR)*size_year + monthEnd/11*size_year, HEIGHT/2 + (size+20)*event.index);
 
         if(event.dateEnd == Date()){
             positionEnd.x -=size/2;
@@ -110,5 +110,10 @@ document.addEventListener("DOMContentLoaded", function() {
             ctx.stroke();
             ctx.closePath();
         }
-    }    
+    }
+
+    let mail = document.createElement("a");
+    mail.href = "mailto:viprey.pierre@gmail.com";
+    mail.innerText = "viprey.pierre@gmail.com";
+    document.getElementById("mail").insertAdjacentElement('beforeend', mail);
 });

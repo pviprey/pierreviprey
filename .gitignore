@@ -1,2 +1,5 @@
 images/Github-Mark-64*
-*.pdf
+*.odt
+/styles/.sass-cache
+/styles/*.map
+/styles/*.sh

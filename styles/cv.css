@@ -1,13 +1,12 @@
-:root{
-    --blue: rgb(59, 89, 152);;
-    --transparent-blue: rgba(59, 89, 152, 0);
-}
+@charset "UTF-8";
+:root {
+  --blue: rgb(59, 89, 152);
+  --transparent-blue: rgba(59, 89, 152, 0); }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -17,316 +16,289 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-	display: block;
-}
+  display: block; }
+
 body {
-    font-family:sans-serif;
-    font-size: 30px;
-	line-height: 1;
-}
-h1, h2{
-    font-family: 'Roboto';
-}
+  font-family: sans-serif;
+  font-size: 30px;
+  line-height: 1; }
+
+h1, h2 {
+  font-family: 'Roboto'; }
+
 ol, ul {
-	list-style: none;
-}
+  list-style: none; }
+
 blockquote, q {
-	quotes: none;
-}
+  quotes: none; }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
-}
+  content: '';
+  content: none; }
+
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-p{
-    text-justify: auto;
-}
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+p {
+  text-justify: auto; }
 
 /*==========================================================================*/
+a {
+  font-style: italic;
+  text-decoration: 2px underline dotted; }
 
-a{
-    font-style: italic;
-    text-decoration: 2px underline dotted;
-}
+header {
+  padding-bottom: 30px; }
 
-header{
-    padding-bottom: 30px;
-}
+.responsive {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around; }
 
-.responsive{
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: row;
-	justify-content: space-around;
-}
 /*  *   *   *   *   *   *   *   *   *   *   *   *   *
                 Gestion des différents liens
 *   *   *   *   *   *   *   *   *   *   *   *   *   */
-#liens{
-    background-color: var(--blue);
-    width: 100%;
-    height: 70px;
-}
-#liens > a{
+#liens {
+  background-color: var(--blue);
+  width: 100%;
+  height: 70px; }
+  #liens a {
     position: relative;
     display: inline-block;
     top: 3px;
-
     width: 64px;
     height: 64px;
-
     margin-left: 10px;
-    margin-right: 10px;
-}
-#liens > a.github{
-    background-image: url(../images/GitHub-Mark-Light-64px.png);
-}
-#liens > a.linkedin{
+    margin-right: 10px; }
+  #liens a.github {
+    background-image: url(../images/GitHub-Mark-Light-64px.png); }
+  #liens a.linkedin {
     background-image: url(../images/LinkedIn-Mark-64px.png);
-    background-size: contain;
-}
-#liens > .pdf{
+    background-size: contain; }
+  #liens .pdf {
     right: 0;
     background-image: url(../images/Pdf.png);
     background-size: contain;
-    background-repeat: no-repeat;
-}
-
+    background-repeat: no-repeat; }
 
 /*  *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *
                 Gestion de la bannière et photo de profil
 *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   */
-#banniere{
-    z-index: 0;
-    width: 100%;
-    height: 200px;
-}
-#banniere > img{
+#banniere {
+  z-index: 0;
+  width: 100%;
+  height: 200px; }
+  #banniere img {
     position: relative;
-    object-fit: none; /* Do not scale the image */
-    object-position: center; /* Center the image within the element */
+    object-fit: none;
+    /* Do not scale the image */
+    object-position: center;
+    /* Center the image within the element */
     background-size: cover;
     z-index: 0;
     width: 100%;
-    height: 400px;
-}
+    height: 400px; }
 
-.line{
-    position: relative;    
-    z-index: 1;
-    background-image: linear-gradient(to right, var(--transparent-blue), var(--blue), var(--blue), var(--transparent-blue));
-    background-repeat: no-repeat;
-    background-size: 100% 10px;
-    background-position: bottom 60px center;
-}
-.line > img#pdp{
+.separateur {
+  position: relative;
+  z-index: 1;
+  background-image: linear-gradient(to right, var(--transparent-blue), var(--blue), var(--blue), var(--transparent-blue));
+  background-repeat: no-repeat;
+  background-size: 100% 7px;
+  background-position: bottom 60px center; }
+  .separateur img#pdp {
     position: relative;
     z-index: 0;
-
     width: 250px;
     height: 250px;
-
     display: block;
     margin-left: auto;
     margin-right: auto;
-
-    border: 10px solid var(--blue);
-    border-radius: 100%;
-}
-
+    border: 7px solid var(--blue);
+    border-radius: 100%; }
 
 /*  *   *   *   *   *   *   *   *   *   *   *   *   *
                 Gestion de l'entête
 *   *   *   *   *   *   *   *   *   *   *   *   *   */
-#entete{
-    display: flex;
-    flex-wrap: wrap;
-    align-content: space-around;
-    width: auto;
-}
-#entete p{
-    color: var(--blue);
-}
-#entete > #NOMPrenom{
+#entete {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+  width: auto; }
+  #entete p {
+    color: var(--blue); }
+  #entete #NOMPrenom {
     text-align: center;
     width: 100%;
     font-size: 60px;
-    margin: 10px 0px 50px 0px;
-}
-#entete p + p{
-    margin-top: 20px;
-}
-#entete #mail > a{
-    color: var(--blue);
-}
-#entete > aside{
+    margin: 10px 0px 50px 0px; }
+  #entete p + p {
+    margin-top: 20px; }
+  #entete #mail > a {
+    color: var(--blue); }
+  #entete aside {
     text-align: center;
-    width: 50%;
-}
-
+    width: 50%; }
 
 /*  *   *   *   *   *   *   *   *   *   *   *   *   *
                     Gestion du main
 *   *   *   *   *   *   *   *   *   *   *   *   *   */
-main > div{
-    padding: 20px 0px;
-}
-main > div:nth-child(2n+1){
-    background-color:var(--blue);
-    color: white;
-}
-main > div:nth-child(2n){
-    background-color: white;
-    color: var(--blue);
-}
-main > div:nth-child(2n+1) a{
-    color: white;
-}
-main > div:nth-child(2n) a{
-    color: var(--blue);
-}
-main > div h1{
+main > div {
+  padding: 20px 0px; }
+  main > div h1 {
+    margin-left: 5px;
     font-weight: bold;
     font-size: 60px;
     text-decoration: underline;
-    margin-bottom: 20px;
-}
-main > div h2{
+    margin-bottom: 20px; }
+  main > div h2 {
     font-weight: bold;
     font-size: 40px;
     text-decoration: underline;
     margin-left: 40px;
-    margin-bottom: 13px;
-}
-
+    margin-bottom: 13px; }
+main > div:nth-child(2n+1) {
+  background-color: var(--blue);
+  color: white; }
+  main > div:nth-child(2n+1) a {
+    color: white; }
+main > div:nth-child(2n) {
+  color: var(--blue); }
+  main > div:nth-child(2n) a {
+    color: var(--blue); }
 
 /*  *   *   *   *   *   *   *   *   *   *   *   *   *
                 Gestion de la bio
 *   *   *   *   *   *   *   *   *   *   *   *   *   */
-#bio .quote::before{
-    content: "« ";
-}
-#bio .quote::after{
-    content: " »";
-}
-#bio .quote{
-    text-align: center;
-    margin: 0px 7vw;
-    font-size: 25px;
-    font-style: italic;
-}
-
+#bio .quote::before {
+  content: "« "; }
+#bio .quote::after {
+  content: " »"; }
+#bio .quote {
+  text-align: center;
+  margin: 0px 7vw;
+  font-size: 25px;
+  font-style: italic; }
 
 /*  *   *   *   *   *   *   *   *   *   *   *   *   *
                 Gestion de à propos
 *   *   *   *   *   *   *   *   *   *   *   *   *   */
-#propos p{
-    margin-left:7vw;
-    margin-right: 7vw;
-    text-align: justify;
-}
-#propos p+p{
-    padding-top: 25px;
-}
-
+#propos p {
+  margin-left: 7vw;
+  margin-right: 7vw;
+  text-align: justify; }
+  #propos p + p {
+    padding-top: 25px; }
 
 /*  *   *   *   *   *   *   *   *   *   *   *   *   *
-                Gestion de mes projets
+                Gestion de mes expériences
 *   *   *   *   *   *   *   *   *   *   *   *   *   */
-#projet #limit{
-    padding: 0;
-    margin: auto;
-    display: block;  
-    width: 90vw;
-    height:70vh;
-    border: 2px solid black;
-    border-radius: 25px;
-    box-sizing: border-box;
-}
-#projet canvas{
-    background-color: white;
-    border-radius: 25px;
-    height: 100%;
-    width: 100%;
-}
-#projet p{
+#experience #limit canvas {
+  padding: 0;
+  margin: auto;
+  display: block;
+  box-sizing: border-box;
+  width: 90vw;
+  height: 60vh;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 25px; }
+#experience #limit li {
+  margin-top: 10px;
+  margin-left: 7vw; }
+#experience #limit #blue::before {
+  background-color: blue; }
+#experience #limit #purple::before {
+  background-color: purple; }
+#experience #limit #red::before {
+  background-color: red; }
+#experience #limit #orange::before {
+  background-color: orange; }
+#experience > ul {
+  margin-top: 20px;
+  margin-left: 2vw; }
+  #experience > ul li {
+    list-style-type: disc;
     margin-top: 10px;
-    margin-left: 7vw;
-}
-#projet p::before{
-    display: inline-flex;
-    content: "";
-    margin-left: -30px;
-    margin-right: 5px;
-    width: 30px;
-    height: 30px;
-}
-#projet #blue::before{
-    background-color: blue;
-}
-#projet #purple::before{
-    background-color: purple;
-}
-#projet #red::before{
-    background-color: red;
-}
-#projet #orange::before{
-    background-color: orange;
-}
-
+    margin-left: 5vw; }
+#experience li::before {
+  display: inline-flex;
+  content: "";
+  margin-left: -30px;
+  margin-right: 5px;
+  width: 30px;
+  height: 30px; }
 
 /*  *   *   *   *   *   *   *   *   *   *   *   *   *
                 Gestion de mes compétences
 *   *   *   *   *   *   *   *   *   *   *   *   *   */
-#competence > .responsive > div{
-    padding-right: 40px;
-    border-right: 2px dotted var(--blue);
-}
-#competence > .responsive > div:last-child{
+#competence .responsive {
+  justify-content: center;
+  flex-wrap: nowrap; }
+  #competence .responsive > div {
     max-width: 40%;
-    padding: 0px;
-    border-right: none;
-    margin-right: 40px;
-}
-#competence > .responsive ul > li{
+    padding: 15px; }
+  #competence .responsive > div:nth-child(2n+1) {
+    background-color: var(--blue);
+    color: white; }
+    #competence .responsive > div:nth-child(2n+1) a {
+      color: white; }
+  #competence .responsive > div:nth-child(2n) {
+    color: var(--blue); }
+    #competence .responsive > div:nth-child(2n) a {
+      color: var(--blue); }
+  #competence .responsive > div:first-child {
+    margin-left: 40px; }
+  #competence .responsive > div:last-child {
+    margin-right: 40px; }
+  #competence .responsive ul > li {
     margin-left: 7vw;
-    margin-bottom: 10px;
-    list-style-type: circle;
-}
-
+    margin-top: 10px;
+    list-style-type: circle; }
+  #competence .responsive h2 {
+    margin: 0;
+    margin-left: 5px; }
 
 /*  *   *   *   *   *   *   *   *   *   *   *   *   *
                 Gestion de mes projets
 *   *   *   *   *   *   *   *   *   *   *   *   *   */
-#projets a{
-	margin-top: 15px;
-	background-color: var(--blue);
-	border: 2px solid white;
-	font-weight: bold;
-    display: block;
-    text-align: center;
-	color: white;
-}
-#projets a > p{
-    display: block;
-	height: 205px;
-	width: 345px;
-}
+#projets .responsive div {
+  display: flex;
+  flex-direction: column;
+  width: 345px;
+  height: 205px;
+  margin-top: 15px;
+  border: 2px solid white;
+  background-color: var(--blue);
+  color: white; }
+  #projets .responsive div a {
+    display: flex;
+    flex: 1; }
+    #projets .responsive div a + a {
+      border-top: 2px solid white; }
+    #projets .responsive div a > p {
+      padding: 0 10px;
+      display: flex;
+      flex: 1;
+      font-weight: bold;
+      text-align: center;
+      align-items: center; }
+
+/*# sourceMappingURL=cv.css.map */
