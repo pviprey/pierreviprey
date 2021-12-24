@@ -152,7 +152,7 @@ p + p {
   #entete .center {
     text-align: center;
     width: 100%; }
-  #entete #NOMPrenom {
+  #entete #NomPrenom {
     font-size: 60px; }
   #entete #traits {
     margin: 10px 0px 50px 0px; }
