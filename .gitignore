@@ -1,5 +1,6 @@
-images/Github-Mark-64*
 *.odt
+.~lock*
+images/Github-Mark-64*
 /styles/.sass-cache
 /styles/*.map
 /styles/*.sh

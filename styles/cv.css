@@ -147,13 +147,15 @@ p + p {
   width: auto; }
   #entete p {
     color: var(--blue); }
-  #entete #NOMPrenom {
+    #entete p + p {
+      margin-top: 20px; }
+  #entete .center {
     text-align: center;
-    width: 100%;
-    font-size: 60px;
+    width: 100%; }
+  #entete #NOMPrenom {
+    font-size: 60px; }
+  #entete #traits {
     margin: 10px 0px 50px 0px; }
-  #entete p + p {
-    margin-top: 20px; }
   #entete #mail > a {
     color: var(--blue); }
   #entete aside {
@@ -163,28 +165,28 @@ p + p {
 /*  *   *   *   *   *   *   *   *   *   *   *   *   *
                     Gestion du main
 *   *   *   *   *   *   *   *   *   *   *   *   *   */
-main > div {
+main > section {
   padding: 25px 0px; }
-  main > div h1 {
+  main > section h1 {
     margin-left: 5px;
     font-weight: bold;
     font-size: 45px;
     text-decoration: underline;
     margin-bottom: 20px; }
-  main > div h2 {
+  main > section h2 {
     font-weight: bold;
     font-size: 35px;
     text-decoration: underline;
     margin-left: 40px;
     margin-bottom: 13px; }
-main > div:nth-child(2n+1) {
+main > section:nth-child(2n+1) {
   background-color: var(--blue);
   color: white; }
-  main > div:nth-child(2n+1) a {
+  main > section:nth-child(2n+1) a {
     color: white; }
-main > div:nth-child(2n) {
+main > section:nth-child(2n) {
   color: var(--blue); }
-  main > div:nth-child(2n) a {
+  main > section:nth-child(2n) a {
     color: var(--blue); }
 
 /*  *   *   *   *   *   *   *   *   *   *   *   *   *
@@ -227,8 +229,8 @@ main > div:nth-child(2n) {
   background-color: blue; }
 #experience #limit #purple::before {
   background-color: purple; }
-#experience #limit #red::before {
-  background-color: red; }
+#experience #limit #green::before {
+  background-color: green; }
 #experience #limit #orange::before {
   background-color: orange; }
 #experience > ul {
@@ -252,21 +254,21 @@ main > div:nth-child(2n) {
 #competence .responsive {
   justify-content: center;
   flex-wrap: nowrap; }
-  #competence .responsive > div {
+  #competence .responsive > section {
     max-width: 40%;
     padding: 25px; }
-  #competence .responsive > div:nth-child(2n+1) {
+  #competence .responsive > section:nth-child(2n) {
     background-color: var(--blue);
     color: white; }
-    #competence .responsive > div:nth-child(2n+1) a {
+    #competence .responsive > section:nth-child(2n) a {
       color: white; }
-  #competence .responsive > div:nth-child(2n) {
+  #competence .responsive > section:nth-child(2n+1) {
     color: var(--blue); }
-    #competence .responsive > div:nth-child(2n) a {
+    #competence .responsive > section:nth-child(2n+1) a {
       color: var(--blue); }
-  #competence .responsive > div:first-child {
+  #competence .responsive > section:first-child {
     margin-left: 40px; }
-  #competence .responsive > div:last-child {
+  #competence .responsive > section:last-child {
     margin-right: 40px; }
   #competence .responsive ul > li {
     margin-left: 5vw;
@@ -293,12 +295,12 @@ main > div:nth-child(2n) {
     flex: 1; }
     #projets .responsive div a + a {
       border-top: 2px solid white; }
-    #projets .responsive div a > p {
-      padding: 0 10px;
-      display: flex;
-      flex: 1;
-      font-weight: bold;
-      text-align: center;
-      align-items: center; }
+  #projets .responsive div p {
+    padding: 0 10px;
+    display: flex;
+    flex: 1;
+    font-weight: bold;
+    text-align: center;
+    align-items: center; }
 
 /*# sourceMappingURL=cv.css.map */

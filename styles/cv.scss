@@ -175,17 +175,22 @@ p + p{
 
     p{
         color: var(--blue);
+        + p{
+            margin-top: 20px;
+        }    
+    }
+
+    .center{
+        text-align: center;
+        width: 100%;
     }
 
     #NOMPrenom{
-        text-align: center;
-        width: 100%;
         font-size: 60px;
-        margin: 10px 0px 50px 0px;
     }
 
-    p + p{
-        margin-top: 20px;
+    #traits{
+        margin: 10px 0px 50px 0px;
     }
     
     #mail > a{
@@ -203,7 +208,7 @@ p + p{
                     Gestion du main
 *   *   *   *   *   *   *   *   *   *   *   *   *   */
 main{
-    > div{
+    > section{
         padding: 25px 0px;
 
         h1{
@@ -224,7 +229,7 @@ main{
         }        
     }
 
-    > div:nth-child(2n+1){
+    > section:nth-child(2n+1){
         background-color:var(--blue);
         color: white;
 
@@ -233,7 +238,7 @@ main{
         }
     }
 
-    > div:nth-child(2n){
+    > section:nth-child(2n){
         color: var(--blue);
 
         a{
@@ -308,8 +313,8 @@ main{
             background-color: purple;
         }
     
-        #red::before{
-            background-color: red;
+        #green::before{
+            background-color: green;
         }
     
         #orange::before{
@@ -347,12 +352,12 @@ main{
         justify-content: center;
         flex-wrap: nowrap;
 
-        > div{
+        > section{
             max-width: 40%;
             padding: 25px;
         }
 
-        > div:nth-child(2n+1){
+        > section:nth-child(2n){
             background-color:var(--blue);
             color: white;
     
@@ -361,7 +366,7 @@ main{
             }
         }
     
-        > div:nth-child(2n){
+        > section:nth-child(2n+1){
             color: var(--blue);
     
             a{
@@ -369,11 +374,11 @@ main{
             }
         }
 
-        > div:first-child{
+        > section:first-child{
             margin-left: 40px;
         }
 
-        > div:last-child{
+        > section:last-child{
             margin-right: 40px;
         }
 
@@ -413,16 +418,16 @@ main{
                 +a{
                     border-top: 2px solid white;
                 } 
-                
-                > p{
-                    padding: 0 10px;
-                    display: flex;
-                    flex: 1;
-                    font-weight: bold;
-                    text-align: center;
-                    align-items: center;
-                }
             }
+
+            p{
+                padding: 0 10px;
+                display: flex;
+                flex: 1;
+                font-weight: bold;
+                text-align: center;
+                align-items: center;
+            }            
         }
     }
 }
