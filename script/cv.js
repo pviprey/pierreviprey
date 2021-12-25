@@ -89,6 +89,16 @@ function fill_canvas(tab_exp){
         ctx.shadowBlur = 7;
         ctx.fillStyle = "white";
         ctx.font = "40px helvetica";
+        if($(document).width() < 950){
+            if(event.index == 1){
+                ctx.font = "30px helvetica"
+            }
+        }
+        if($(document).width() < 650){
+            if(event.index == 1){
+                continue;
+            }
+        }        
         ctx.fillText(event.experience, (positionEnd.x-positionBegin.x)/2+positionBegin.x, positionBegin.y+size/4);
     }
 }

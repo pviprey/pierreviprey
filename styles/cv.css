@@ -294,12 +294,11 @@ main > section:nth-child(2n) {
       width: 328px; }
     #competence .responsive > section:nth-child(2n + 1) {
       position: relative;
-      display: block;
       overflow: auto; }
     #competence .responsive > section:nth-child(2n) {
       position: relative;
-      display: block;
-      float: right; }
+      float: right;
+      margin-left: 100%; }
     #competence .responsive > section:first-child {
       margin-left: 0; }
     #competence .responsive > section:last-child {
