@@ -49,6 +49,7 @@ function fill_canvas(tab_exp){
     }
 
     for(let event of tab_exp){
+        ctx.shadowBlur = 0;
         let size = 50;
 
         let monthBegin = event.dateBegin.getMonth();
@@ -84,7 +85,9 @@ function fill_canvas(tab_exp){
         }
 
         ctx.textAlign = "center";
-        ctx.fillStyle = "black";
+        ctx.shadowColor = "black";
+        ctx.shadowBlur = 7;
+        ctx.fillStyle = "white";
         ctx.font = "40px helvetica";
         ctx.fillText(event.experience, (positionEnd.x-positionBegin.x)/2+positionBegin.x, positionBegin.y+size/4);
     }
