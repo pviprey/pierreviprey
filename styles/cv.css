@@ -78,14 +78,14 @@ p + p {
 li {
   text-align: justify; }
 
-/*  *   *   *   *   *   *   *   *   *   *   *   *   *
-                Gestion des différents liens
-*   *   *   *   *   *   *   *   *   *   *   *   *   */
-#liens {
+/*  *   *   *   *   *   *   *   *   *   *   *   *   *   *   *
+            Gestion des différents liens du bandeau
+*   *   *   *   *   *   *   *   *   *   *   *   *   *   *   */
+#bandeau {
   background-color: var(--blue);
   width: 100%;
   height: 70px; }
-  #liens a {
+  #bandeau a {
     position: relative;
     display: inline-block;
     top: 3px;
@@ -93,12 +93,12 @@ li {
     height: 64px;
     margin-left: 10px;
     margin-right: 10px; }
-  #liens a.github {
+  #bandeau a.github {
     background-image: url(../images/GitHub-Mark-Light-64px.png); }
-  #liens a.linkedin {
+  #bandeau a.linkedin {
     background-image: url(../images/LinkedIn-Mark-64px.png);
     background-size: contain; }
-  #liens .pdf {
+  #bandeau .pdf {
     right: 0;
     background-image: url(../images/Pdf.png);
     background-size: contain;
@@ -237,10 +237,10 @@ main > section:nth-child(2n) {
   background-color: green; }
 #experience #limit #orange::before {
   background-color: orange; }
-#experience > ul {
+#experience > ul, #experience p {
   margin-top: 20px;
   margin-left: 2vw; }
-  #experience > ul li {
+  #experience > ul li, #experience p li {
     list-style-type: disc;
     margin-top: 10px;
     margin-left: 5vw;
