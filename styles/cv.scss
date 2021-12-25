@@ -82,6 +82,10 @@ p + p{
     margin-top: 10px;
 }
 
+li{
+    text-align: justify;
+}
+
 /*  *   *   *   *   *   *   *   *   *   *   *   *   *
                 Gestion des différents liens
 *   *   *   *   *   *   *   *   *   *   *   *   *   */
@@ -303,6 +307,7 @@ main{
         li{
             margin-top: 10px;
             margin-left: 7vw;
+            margin-right: 7vw;
         }
 
         #blue::before{
@@ -330,6 +335,7 @@ main{
             list-style-type: disc;
             margin-top: 10px;
             margin-left: 5vw;
+            margin-right: 7vw;
         }       
     }
 
@@ -347,7 +353,7 @@ main{
 /*  *   *   *   *   *   *   *   *   *   *   *   *   *
                 Gestion de mes compétences
 *   *   *   *   *   *   *   *   *   *   *   *   *   */
-#competence{
+#competence{   
     .responsive{
         justify-content: center;
         flex-wrap: nowrap;
@@ -393,6 +399,39 @@ main{
             margin-left: 5px;
         }
     }
+
+    @media only screen and (max-width: 700px){
+        .responsive{
+            position: relative;
+            display: inline;
+            flex-wrap: unset;
+            flex-direction: unset;
+            justify-content: unset;
+
+            > section{
+                max-width: none;
+                width: 328px;
+            }
+
+            > section:nth-child(2n + 1){
+                position: relative;
+                overflow: auto;
+            }
+
+            > section:nth-child(2n){
+                position: relative;
+                float: right;
+            }
+
+            > section:first-child{
+                margin-left: 0;
+            }
+    
+            > section:last-child{
+                margin-right: 0;
+            }            
+        }
+    }     
 }
 
 
@@ -412,7 +451,7 @@ main{
             color: white;
 
             a{
-                display: flex;
+                display: table;
                 flex: 1;
 
                 +a{
@@ -422,11 +461,10 @@ main{
 
             p{
                 padding: 0 10px;
-                display: flex;
-                flex: 1;
+                display: table-cell;
                 font-weight: bold;
                 text-align: center;
-                align-items: center;
+                vertical-align: middle;
             }            
         }
     }

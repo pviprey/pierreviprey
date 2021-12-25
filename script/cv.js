@@ -85,7 +85,7 @@ function fill_canvas(tab_exp){
 
         ctx.textAlign = "center";
         ctx.fillStyle = "black";
-        ctx.font = "4vh helvetica";
+        ctx.font = "40px helvetica";
         ctx.fillText(event.experience, (positionEnd.x-positionBegin.x)/2+positionBegin.x, positionBegin.y+size/4);
     }
 }

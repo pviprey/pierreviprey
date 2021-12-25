@@ -75,6 +75,9 @@ header {
 p + p {
   margin-top: 10px; }
 
+li {
+  text-align: justify; }
+
 /*  *   *   *   *   *   *   *   *   *   *   *   *   *
                 Gestion des différents liens
 *   *   *   *   *   *   *   *   *   *   *   *   *   */
@@ -224,7 +227,8 @@ main > section:nth-child(2n) {
   border-radius: 25px; }
 #experience #limit li {
   margin-top: 10px;
-  margin-left: 7vw; }
+  margin-left: 7vw;
+  margin-right: 7vw; }
 #experience #limit #blue::before {
   background-color: blue; }
 #experience #limit #purple::before {
@@ -239,7 +243,8 @@ main > section:nth-child(2n) {
   #experience > ul li {
     list-style-type: disc;
     margin-top: 10px;
-    margin-left: 5vw; }
+    margin-left: 5vw;
+    margin-right: 7vw; }
 #experience li::before {
   display: inline-flex;
   content: "";
@@ -277,6 +282,26 @@ main > section:nth-child(2n) {
   #competence .responsive h2 {
     margin: 0;
     margin-left: 5px; }
+@media only screen and (max-width: 700px) {
+  #competence .responsive {
+    position: relative;
+    display: inline;
+    flex-wrap: unset;
+    flex-direction: unset;
+    justify-content: unset; }
+    #competence .responsive > section {
+      max-width: none;
+      width: 328px; }
+    #competence .responsive > section:nth-child(2n + 1) {
+      position: relative;
+      overflow: auto; }
+    #competence .responsive > section:nth-child(2n) {
+      position: relative;
+      float: right; }
+    #competence .responsive > section:first-child {
+      margin-left: 0; }
+    #competence .responsive > section:last-child {
+      margin-right: 0; } }
 
 /*  *   *   *   *   *   *   *   *   *   *   *   *   *
                 Gestion de mes projets
@@ -291,16 +316,15 @@ main > section:nth-child(2n) {
   background-color: var(--blue);
   color: white; }
   #projets .responsive div a {
-    display: flex;
+    display: table;
     flex: 1; }
     #projets .responsive div a + a {
       border-top: 2px solid white; }
   #projets .responsive div p {
     padding: 0 10px;
-    display: flex;
-    flex: 1;
+    display: table-cell;
     font-weight: bold;
     text-align: center;
-    align-items: center; }
+    vertical-align: middle; }
 
 /*# sourceMappingURL=cv.css.map */
