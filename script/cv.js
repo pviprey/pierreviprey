@@ -35,8 +35,8 @@ function fill_canvas(tab_exp){
         let year = START_YEAR + i;
         ctx.textAlign = "center";
         ctx.fillStyle = "black";
-        ctx.font = "2.4vh helvetica";
-        let position = new Coord(size_year/2+size_year*i, 25);
+        ctx.font = "2.3vh helvetica";
+        let position = new Coord(size_year/2+size_year*i, 30);
         ctx.fillText(year, position.x, position.y);
 
         ctx.beginPath();
