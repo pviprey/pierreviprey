@@ -1,8 +1,4 @@
 @charset "UTF-8";
-:root {
-  --blue: rgb(59, 89, 152);
-  --transparent-blue: rgba(59, 89, 152, 0); }
-
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -59,6 +55,10 @@ p {
   text-justify: auto; }
 
 /*==========================================================================*/
+:root {
+  --blue: rgb(59, 89, 152);
+  --transparent-blue: rgba(59, 89, 152, 0); }
+
 a {
   font-style: italic;
   text-decoration: 2px underline dotted; }
