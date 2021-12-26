@@ -54,17 +54,18 @@ table {
 p {
   text-justify: auto; }
 
-/*==========================================================================*/
+/*=================================MY CSS==================================*/
 :root {
   --blue: rgb(59, 89, 152);
-  --transparent-blue: rgba(59, 89, 152, 0); }
+  --transparent-blue: rgba(59, 89, 152, 0);
+  --light: rgb(232, 230, 227);
+  --grey: rgb(56, 62, 66);
+  --dark: rgb(32, 34, 36); }
 
 a {
   font-style: italic;
-  text-decoration: 2px underline dotted; }
-
-header {
-  padding-bottom: 30px; }
+  text-decoration: 2px underline dotted;
+  color: var(--dark); }
 
 .responsive {
   display: flex;
@@ -78,254 +79,273 @@ p + p {
 li {
   text-align: justify; }
 
-/*  *   *   *   *   *   *   *   *   *   *   *   *   *   *   *
-            Gestion des différents liens du bandeau
-*   *   *   *   *   *   *   *   *   *   *   *   *   *   *   */
-#bandeau {
-  background-color: var(--blue);
-  width: 100%;
-  height: 70px; }
-  #bandeau a {
-    position: relative;
-    display: inline-block;
-    top: 3px;
-    width: 64px;
-    height: 64px;
-    margin-left: 10px;
-    margin-right: 10px; }
-  #bandeau a.github {
-    background-image: url(../images/GitHub-Mark-Light-64px.png); }
-  #bandeau a.linkedin {
-    background-image: url(../images/LinkedIn-Mark-64px.png);
-    background-size: contain; }
-  #bandeau .pdf {
-    right: 0;
-    background-image: url(../images/Pdf.png);
-    background-size: contain;
-    background-repeat: no-repeat; }
-
-/*  *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *
-                Gestion de la bannière et photo de profil
-*   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   */
-#banniere {
-  z-index: 0;
-  width: 100%;
-  height: 150px; }
-  #banniere img {
-    position: relative;
-    object-fit: none;
-    /* Do not scale the image */
-    object-position: center;
-    /* Center the image within the element */
-    background-size: cover;
-    z-index: 0;
-    width: 100%;
-    height: 350px; }
-
-.separateur {
-  position: relative;
-  z-index: 1;
-  background-image: linear-gradient(to right, var(--transparent-blue), var(--blue), var(--blue), var(--transparent-blue));
-  background-repeat: no-repeat;
-  background-size: 100% 7px;
-  background-position: bottom 60px center; }
-  .separateur img#pdp {
-    position: relative;
-    z-index: 0;
-    width: 250px;
-    height: 250px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    border: 7px solid var(--blue);
-    border-radius: 100%; }
-
 /*  *   *   *   *   *   *   *   *   *   *   *   *   *
-                Gestion de l'entête
+                    Gestion du header               
 *   *   *   *   *   *   *   *   *   *   *   *   *   */
-#entete {
-  display: flex;
-  flex-wrap: wrap;
-  align-content: space-around;
-  width: auto; }
-  #entete p {
-    color: var(--blue); }
-    #entete p + p {
-      margin-top: 20px; }
-  #entete .center {
-    text-align: center;
-    width: 100%; }
-  #entete #NomPrenom {
-    font-size: 60px; }
-  #entete #traits {
-    margin: 10px 0px 50px 0px; }
-  #entete #mail > a {
-    color: var(--blue); }
-  #entete aside {
-    text-align: center;
-    width: 50%; }
+header {
+  padding-bottom: 30px;
+  /*  *   *   *   *   *   *   *   *   *   *   *   *   *   *   *
+              Gestion des différents liens du bandeau         
+  *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   */
+  /*  *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *
+                  Gestion de la bannière et photo de profil
+  *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   */
+  /*  *   *   *   *   *   *   *   *   *   *   *   *   *
+                  Gestion de l'entête
+  *   *   *   *   *   *   *   *   *   *   *   *   *   */ }
+  header #bandeau {
+    background-color: var(--blue);
+    width: 100%;
+    height: 70px; }
+    header #bandeau a {
+      position: relative;
+      display: inline-block;
+      top: 3px;
+      width: 64px;
+      height: 64px;
+      margin-left: 10px;
+      margin-right: 10px; }
+    header #bandeau a.github {
+      background-image: url(../images/GitHub-Mark-Light-64px.png); }
+    header #bandeau a.linkedin {
+      background-image: url(../images/LinkedIn-Mark-64px.png);
+      background-size: contain; }
+    header #bandeau .pdf {
+      right: 0;
+      background-image: url(../images/Pdf.png);
+      background-size: contain;
+      background-repeat: no-repeat; }
+  header #banniere {
+    height: 350px;
+    margin-bottom: 100px;
+    background-color: var(--grey); }
+    header #banniere #particles-js {
+      height: 350px; }
+    header #banniere .separateur {
+      position: relative;
+      height: 7px;
+      background-image: linear-gradient(to right, var(--transparent-blue), var(--blue), var(--blue), var(--transparent-blue)); }
+    header #banniere img#pdp {
+      position: absolute;
+      z-index: 2;
+      width: 250px;
+      height: 250px;
+      top: 220px;
+      left: calc(50% - 250px/2);
+      border: 7px solid var(--blue);
+      border-radius: 100%;
+      background-color: violet; }
+  header #entete {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around; }
+    header #entete p {
+      color: var(--dark); }
+      header #entete p + p {
+        margin-top: 20px; }
+    header #entete .center {
+      text-align: center;
+      width: 100%; }
+    header #entete aside {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      width: 50%; }
+    header #entete #NomPrenom {
+      font-size: 60px; }
+    header #entete #traits {
+      margin: 10px 0px 50px 0px; }
 
 /*  *   *   *   *   *   *   *   *   *   *   *   *   *
                     Gestion du main
 *   *   *   *   *   *   *   *   *   *   *   *   *   */
-main > section {
-  padding: 25px 0px; }
-  main > section h1 {
-    margin-left: 5px;
-    font-weight: bold;
-    font-size: 45px;
-    text-decoration: underline;
-    margin-bottom: 20px; }
-  main > section h2 {
-    font-weight: bold;
-    font-size: 35px;
-    text-decoration: underline;
-    margin-left: 40px;
-    margin-bottom: 13px; }
-main > section:nth-child(2n+1) {
-  background-color: var(--blue);
-  color: white; }
-  main > section:nth-child(2n+1) a {
-    color: white; }
-main > section:nth-child(2n) {
-  color: var(--blue); }
-  main > section:nth-child(2n) a {
-    color: var(--blue); }
-
-/*  *   *   *   *   *   *   *   *   *   *   *   *   *
-                Gestion de la bio
-*   *   *   *   *   *   *   *   *   *   *   *   *   */
-#bio .quote p:first-child::before {
-  content: "« "; }
-#bio .quote p:last-child::after {
-  content: " »"; }
-#bio .quote {
-  text-align: center;
-  margin: 0px 7vw;
-  font-style: italic; }
-
-/*  *   *   *   *   *   *   *   *   *   *   *   *   *
-                Gestion de à propos
-*   *   *   *   *   *   *   *   *   *   *   *   *   */
-#propos p {
-  margin-left: 7vw;
-  margin-right: 7vw;
-  text-align: justify; }
-
-/*  *   *   *   *   *   *   *   *   *   *   *   *   *
-                Gestion de mes expériences
-*   *   *   *   *   *   *   *   *   *   *   *   *   */
-#experience #limit canvas {
-  padding: 0;
-  margin: auto;
-  display: block;
-  box-sizing: border-box;
-  width: 90vw;
-  height: 30vh;
-  background-color: white;
-  border: 2px solid black;
-  border-radius: 25px; }
-#experience #limit li {
-  margin-top: 10px;
-  margin-left: 7vw;
-  margin-right: 7vw; }
-#experience #limit #blue::before {
-  background-color: blue; }
-#experience #limit #purple::before {
-  background-color: purple; }
-#experience #limit #green::before {
-  background-color: green; }
-#experience #limit #orange::before {
-  background-color: orange; }
-#experience > ul, #experience p {
-  margin-top: 20px;
-  margin-left: 2vw; }
-  #experience > ul li, #experience p li {
-    list-style-type: disc;
-    margin-top: 10px;
-    margin-left: 5vw;
-    margin-right: 7vw; }
-#experience li::before {
-  display: inline-flex;
-  content: "";
-  margin-left: -22px;
-  margin-right: 5px;
-  width: 22px;
-  height: 22px; }
-
-/*  *   *   *   *   *   *   *   *   *   *   *   *   *
-                Gestion de mes compétences
-*   *   *   *   *   *   *   *   *   *   *   *   *   */
-#competence .responsive {
-  justify-content: center;
-  flex-wrap: nowrap; }
-  #competence .responsive > section {
-    max-width: 40%;
-    padding: 25px; }
-  #competence .responsive > section:nth-child(2n) {
-    background-color: var(--blue);
-    color: white; }
-    #competence .responsive > section:nth-child(2n) a {
-      color: white; }
-  #competence .responsive > section:nth-child(2n+1) {
-    color: var(--blue); }
-    #competence .responsive > section:nth-child(2n+1) a {
-      color: var(--blue); }
-  #competence .responsive > section:first-child {
-    margin-left: 40px; }
-  #competence .responsive > section:last-child {
-    margin-right: 40px; }
-  #competence .responsive ul > li {
-    margin-left: 5vw;
-    margin-top: 20px;
-    list-style-type: circle; }
-  #competence .responsive h2 {
-    margin: 0;
-    margin-left: 5px; }
-@media only screen and (max-width: 900px) {
-  #competence .responsive {
-    position: relative;
-    display: inline;
-    flex-wrap: unset;
-    flex-direction: unset;
-    justify-content: unset; }
-    #competence .responsive > section {
-      max-width: none;
-      width: 328px; }
-    #competence .responsive > section:nth-child(2n + 1) {
-      position: relative;
-      overflow: auto; }
-    #competence .responsive > section:nth-child(2n) {
-      position: relative;
-      float: right;
-      margin-left: 100%; }
-    #competence .responsive > section:first-child {
-      margin-left: 0; }
-    #competence .responsive > section:last-child {
-      margin-right: 0; } }
-
-/*  *   *   *   *   *   *   *   *   *   *   *   *   *
-                Gestion de mes projets
-*   *   *   *   *   *   *   *   *   *   *   *   *   */
-#projets .responsive div {
-  display: flex;
-  flex-direction: column;
-  width: 280px;
-  height: 250px;
-  margin-top: 15px;
-  border: 2px solid white;
-  background-color: var(--blue);
-  color: white; }
-  #projets .responsive div a {
-    display: table;
-    flex: 1; }
-    #projets .responsive div a + a {
-      border-top: 2px solid white; }
-  #projets .responsive div p {
-    padding: 0 10px;
-    display: table-cell;
-    font-weight: bold;
+main {
+  /*  *   *   *   *   *   *   *   *   *   *   *   *   *
+                  Gestion de la bio
+  *   *   *   *   *   *   *   *   *   *   *   *   *   */
+  /*  *   *   *   *   *   *   *   *   *   *   *   *   *
+                  Gestion de à propos
+  *   *   *   *   *   *   *   *   *   *   *   *   *   */
+  /*  *   *   *   *   *   *   *   *   *   *   *   *   *
+                  Gestion de mes expériences
+  *   *   *   *   *   *   *   *   *   *   *   *   *   */
+  /*  *   *   *   *   *   *   *   *   *   *   *   *   *
+                  Gestion de mes compétences
+  *   *   *   *   *   *   *   *   *   *   *   *   *   */
+  /*  *   *   *   *   *   *   *   *   *   *   *   *   *
+                  Gestion de mes projets
+  *   *   *   *   *   *   *   *   *   *   *   *   *   */ }
+  main > section {
+    padding: 25px 0px; }
+    main > section h1 {
+      margin-left: 5px;
+      font-weight: bold;
+      font-size: 45px;
+      text-decoration: underline;
+      margin-bottom: 20px; }
+    main > section h2 {
+      font-weight: bold;
+      font-size: 35px;
+      text-decoration: underline;
+      margin-left: 40px;
+      margin-bottom: 13px; }
+  main > section:nth-child(2n+1) {
+    background-color: var(--blue); }
+    main > section:nth-child(2n+1) h1, main > section:nth-child(2n+1) h2, main > section:nth-child(2n+1) p {
+      color: var(--light); }
+  main > section:nth-child(2n) {
+    background-color: var(--light); }
+    main > section:nth-child(2n) h1, main > section:nth-child(2n) h2, main > section:nth-child(2n) p {
+      color: var(--dark); }
+  main #bio .quote p:first-child::before {
+    content: "« "; }
+  main #bio .quote p:last-child::after {
+    content: " »"; }
+  main #bio .quote {
     text-align: center;
-    vertical-align: middle; }
+    margin: 0px 7vw;
+    font-style: italic; }
+  main #propos p {
+    margin-left: 7vw;
+    margin-right: 7vw;
+    text-align: justify; }
+  main #experience #limit canvas {
+    padding: 0;
+    margin: auto;
+    display: block;
+    box-sizing: border-box;
+    width: 90vw;
+    height: 30vh;
+    background-color: var(--light);
+    border: 2px solid var(--dark);
+    border-radius: 25px; }
+  main #experience #limit li {
+    margin-top: 10px;
+    margin-left: 7vw;
+    margin-right: 7vw;
+    color: var(--light); }
+  main #experience #limit #blue::before {
+    background-color: blue; }
+  main #experience #limit #purple::before {
+    background-color: purple; }
+  main #experience #limit #green::before {
+    background-color: green; }
+  main #experience #limit #orange::before {
+    background-color: orange; }
+  main #experience > ul, main #experience p {
+    margin-top: 20px;
+    margin-left: 2vw; }
+    main #experience > ul li, main #experience p li {
+      list-style-type: disc;
+      margin-top: 10px;
+      margin-left: 5vw;
+      margin-right: 7vw;
+      color: var(--light); }
+  main #experience li::before {
+    display: inline-flex;
+    content: "";
+    margin-left: -22px;
+    margin-right: 5px;
+    width: 22px;
+    height: 22px; }
+  main #competence .responsive {
+    justify-content: center;
+    flex-wrap: nowrap; }
+    main #competence .responsive h2 {
+      margin: 0;
+      margin-left: 5px; }
+    main #competence .responsive ul > li {
+      margin-left: 5vw;
+      margin-top: 20px;
+      list-style-type: circle; }
+    main #competence .responsive > section {
+      max-width: 40%;
+      padding: 25px; }
+    main #competence .responsive > section:nth-child(2n) {
+      background-color: var(--blue);
+      border-radius: 25px; }
+      main #competence .responsive > section:nth-child(2n) h2, main #competence .responsive > section:nth-child(2n) li {
+        color: var(--light); }
+    main #competence .responsive > section:first-child {
+      margin-left: 40px; }
+    main #competence .responsive > section:last-child {
+      margin-right: 40px; }
+  @media only screen and (max-width: 900px) {
+    main #competence .responsive {
+      transition: all 1s ease-in;
+      position: relative;
+      display: inline;
+      flex-wrap: unset;
+      flex-direction: unset;
+      justify-content: unset; }
+      main #competence .responsive > section {
+        max-width: none;
+        width: 328px; }
+      main #competence .responsive > section:nth-child(2n + 1) {
+        position: relative;
+        overflow: auto; }
+      main #competence .responsive > section:nth-child(2n) {
+        position: relative;
+        float: right;
+        margin-left: 100%; }
+      main #competence .responsive > section:first-child {
+        margin-left: 0; }
+      main #competence .responsive > section:last-child {
+        margin-right: 0; } }
+  main #projets .responsive {
+    align-items: center; }
+    main #projets .responsive div {
+      display: flex;
+      flex-direction: column;
+      width: 280px;
+      height: 250px;
+      border: 2px solid var(--dark);
+      margin: 25px;
+      justify-content: center;
+      align-content: center;
+      border-radius: 25px;
+      background-color: var(--light); }
+      main #projets .responsive div a:first-child, main #projets .responsive div a:first-child:hover {
+        transition: border-top-left-radius none;
+        transition: border-top-right-radius none; }
+      main #projets .responsive div a:last-child, main #projets .responsive div a:last-child:hover {
+        transition: border-bottom-left-radius none;
+        transition: border-bottom-right-radius none; }
+      main #projets .responsive div a {
+        transition: background-color 0.5s ease-in, font-size 0.5s ease-in;
+        background-color: var(--light);
+        display: table;
+        flex: 1; }
+        main #projets .responsive div a + a {
+          border-top: 2px solid var(--dark); }
+      main #projets .responsive div a:first-child {
+        border-top-left-radius: 22px;
+        border-top-right-radius: 22px; }
+      main #projets .responsive div a:last-child {
+        border-bottom-left-radius: 22px;
+        border-bottom-right-radius: 22px; }
+      main #projets .responsive div a:hover {
+        transition: background-color 0.5s ease-out, font-size 0.5s ease-out;
+        background-color: var(--grey);
+        font-size: 25px;
+        color: var(--light); }
+        main #projets .responsive div a:hover p {
+          color: var(--light); }
+      main #projets .responsive div a:first-child:hover {
+        border-top-left-radius: 22px;
+        border-top-right-radius: 22px; }
+      main #projets .responsive div a:last-child:hover {
+        border-bottom-left-radius: 22px;
+        border-bottom-right-radius: 22px; }
+      main #projets .responsive div p {
+        padding: 0 10px;
+        display: table-cell;
+        font-weight: bold;
+        text-align: center;
+        vertical-align: middle;
+        color: var(--dark); }
+    main #projets .responsive div.clickable a {
+      box-shadow: 10px 5px 10px black; }
 
 /*# sourceMappingURL=cv.css.map */

@@ -55,20 +55,20 @@ p{
     text-justify: auto;
 }
 
-/*==========================================================================*/
+/*=================================MY CSS==================================*/
 
 :root{
     --blue: rgb(59, 89, 152);
     --transparent-blue: rgba(59, 89, 152, 0);
+    --light: rgb(232, 230, 227);
+    --grey: rgb(56, 62, 66);
+    --dark: rgb(32, 34, 36);
 }
 
 a{
     font-style: italic;
     text-decoration: 2px underline dotted;
-}
-
-header{
-    padding-bottom: 30px;
+    color: var(--dark);
 }
 
 .responsive{
@@ -86,124 +86,126 @@ li{
     text-align: justify;
 }
 
-/*  *   *   *   *   *   *   *   *   *   *   *   *   *   *   *
-            Gestion des différents liens du bandeau
-*   *   *   *   *   *   *   *   *   *   *   *   *   *   *   */
-#bandeau{
-    background-color: var(--blue);
-    width: 100%;
-    height: 70px;
-
-    a{
-        position: relative;
-        display: inline-block;
-        top: 3px;
-
-        width: 64px;
-        height: 64px;
-
-        margin-left: 10px;
-        margin-right: 10px;
-    }
-    
-    a.github{
-        background-image: url(../images/GitHub-Mark-Light-64px.png);
-    }
-
-    a.linkedin{
-        background-image: url(../images/LinkedIn-Mark-64px.png);
-        background-size: contain;
-    }
-
-    .pdf{
-        right: 0;
-        background-image: url(../images/Pdf.png);
-        background-size: contain;
-        background-repeat: no-repeat;
-    }
-}
-
-
-/*  *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *
-                Gestion de la bannière et photo de profil
-*   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   */
-#banniere{
-    z-index: 0;
-    width: 100%;
-    height: 150px;
-
-    img{
-        position: relative;
-        object-fit: none; /* Do not scale the image */
-        object-position: center; /* Center the image within the element */
-        background-size: cover;
-        z-index: 0;
-        width: 100%;
-        height: 350px;
-    }
-}
-
-.separateur{
-    position: relative;    
-    z-index: 1;
-    background-image: linear-gradient(to right, var(--transparent-blue), var(--blue), var(--blue), var(--transparent-blue));
-    background-repeat: no-repeat;
-    background-size: 100% 7px;
-    background-position: bottom 60px center;
-
-    img#pdp{
-        position: relative;
-        z-index: 0;
-
-        width: 250px;
-        height: 250px;
-
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-
-        border: 7px solid var(--blue);
-        border-radius: 100%;
-    }
-}
-
 
 /*  *   *   *   *   *   *   *   *   *   *   *   *   *
-                Gestion de l'entête
+                    Gestion du header               
 *   *   *   *   *   *   *   *   *   *   *   *   *   */
-#entete{
-    display: flex;
-    flex-wrap: wrap;
-    align-content: space-around;
-    width: auto;
+header{
+    padding-bottom: 30px;
 
-    p{
-        color: var(--blue);
-        + p{
-            margin-top: 20px;
-        }    
-    }
-
-    .center{
-        text-align: center;
+    /*  *   *   *   *   *   *   *   *   *   *   *   *   *   *   *
+                Gestion des différents liens du bandeau         
+    *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   */
+    #bandeau{
+        background-color: var(--blue);
         width: 100%;
+        height: 70px;
+
+        a{
+            position: relative;
+            display: inline-block;
+            top: 3px;
+
+            width: 64px;
+            height: 64px;
+
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        
+        a.github{
+            background-image: url(../images/GitHub-Mark-Light-64px.png);
+        }
+
+        a.linkedin{
+            background-image: url(../images/LinkedIn-Mark-64px.png);
+            background-size: contain;
+        }
+
+        .pdf{
+            right: 0;
+            background-image: url(../images/Pdf.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
     }
 
-    #NomPrenom{
-        font-size: 60px;
+
+    /*  *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *
+                    Gestion de la bannière et photo de profil
+    *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   */
+    #banniere{
+        height: 350px;
+        margin-bottom: 100px;
+
+        background-color: var(--grey);
+
+        #particles-js{
+            height: 350px;       
+        }
+
+        .separateur{
+            position: relative;
+
+            height: 7px;
+
+            background-image: linear-gradient(to right, var(--transparent-blue), var(--blue), var(--blue), var(--transparent-blue));
+        }
+
+        img#pdp{
+            position: absolute;
+            z-index: 2;
+
+            width: 250px;
+            height: 250px;
+
+            top: 220px;
+            left: calc(50% - 250px/2);
+
+            border: 7px solid var(--blue);
+            border-radius: 100%;
+
+            background-color: violet;
+        }
     }
 
-    #traits{
-        margin: 10px 0px 50px 0px;
-    }
-    
-    #mail > a{
-        color: var(--blue);
-    }
 
-    aside{
-        text-align: center;
-        width: 50%;
+    /*  *   *   *   *   *   *   *   *   *   *   *   *   *
+                    Gestion de l'entête
+    *   *   *   *   *   *   *   *   *   *   *   *   *   */
+    #entete{
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-around;
+
+        p{
+            color: var(--dark);
+
+            + p{
+                margin-top: 20px;
+            }    
+        }
+
+        .center{
+            text-align: center;
+            width: 100%;
+        }
+
+        aside{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            width: 50%;
+        }
+
+        #NomPrenom{
+            font-size: 60px;
+        }
+
+        #traits{
+            margin: 10px 0px 50px 0px;
+        }
     }
 }
 
@@ -234,239 +236,294 @@ main{
     }
 
     > section:nth-child(2n+1){
-        background-color:var(--blue);
-        color: white;
+        background-color: var(--blue);
 
-        a{
-            color: white;
+        h1, h2, p{
+            color: var(--light);
         }
     }
 
     > section:nth-child(2n){
-        color: var(--blue);
+        background-color: var(--light);
 
-        a{
-            color: var(--blue);
+        h1, h2, p{
+            color: var(--dark);
         }
-    }
-}
+    }    
 
 
-/*  *   *   *   *   *   *   *   *   *   *   *   *   *
-                Gestion de la bio
-*   *   *   *   *   *   *   *   *   *   *   *   *   */
-#bio{
-    .quote p:first-child::before{
-        content: "« ";
-    }
-
-    .quote p:last-child::after{
-        content: " »";
-    }
-
-    .quote{
-        text-align: center;
-        margin: 0px 7vw;
-        // font-size: 25px;
-        font-style: italic;
-    }
-}
-
-
-/*  *   *   *   *   *   *   *   *   *   *   *   *   *
-                Gestion de à propos
-*   *   *   *   *   *   *   *   *   *   *   *   *   */
-#propos{
-    p{
-        margin-left:7vw;
-        margin-right: 7vw;
-        text-align: justify;
-    }
-}
-
-
-/*  *   *   *   *   *   *   *   *   *   *   *   *   *
-                Gestion de mes expériences
-*   *   *   *   *   *   *   *   *   *   *   *   *   */
-#experience{
-    #limit{
-        canvas{
-            padding: 0;
-            margin: auto;
-            display: block;
-            box-sizing: border-box;
-            
-            width: 90vw;
-            height:30vh;
-
-            background-color: white;
-            border: 2px solid black;
-            border-radius: 25px;
+    /*  *   *   *   *   *   *   *   *   *   *   *   *   *
+                    Gestion de la bio
+    *   *   *   *   *   *   *   *   *   *   *   *   *   */
+    #bio{
+        .quote p:first-child::before{
+            content: "« ";
         }
 
-        li{
-            margin-top: 10px;
-            margin-left: 7vw;
+        .quote p:last-child::after{
+            content: " »";
+        }
+
+        .quote{
+            text-align: center;
+            margin: 0px 7vw;
+            // font-size: 25px;
+            font-style: italic;
+        }
+    }
+
+
+    /*  *   *   *   *   *   *   *   *   *   *   *   *   *
+                    Gestion de à propos
+    *   *   *   *   *   *   *   *   *   *   *   *   *   */
+    #propos{
+        p{
+            margin-left:7vw;
             margin-right: 7vw;
+            text-align: justify;
         }
-
-        #blue::before{
-            background-color: blue;
-        }
-    
-        #purple::before{
-            background-color: purple;
-        }
-    
-        #green::before{
-            background-color: green;
-        }
-    
-        #orange::before{
-            background-color: orange;
-        }        
     }
 
-    > ul, p{
-        margin-top: 20px;
-        margin-left: 2vw;
 
-        li{
-            list-style-type: disc;
-            margin-top: 10px;
-            margin-left: 5vw;
-            margin-right: 7vw;
-        }       
-    }
+    /*  *   *   *   *   *   *   *   *   *   *   *   *   *
+                    Gestion de mes expériences
+    *   *   *   *   *   *   *   *   *   *   *   *   *   */
+    #experience{
+        #limit{
+            canvas{
+                padding: 0;
+                margin: auto;
+                display: block;
+                box-sizing: border-box;
+                
+                width: 90vw;
+                height:30vh;
 
-    li::before{
-        display: inline-flex;
-        content: "";
-        margin-left: -22px;
-        margin-right: 5px;
-        width: 22px;
-        height: 22px;
-    }     
-}
+                background-color:  var(--light);
+                border: 2px solid var(--dark);
+                border-radius: 25px;
 
-
-/*  *   *   *   *   *   *   *   *   *   *   *   *   *
-                Gestion de mes compétences
-*   *   *   *   *   *   *   *   *   *   *   *   *   */
-#competence{   
-    .responsive{
-        justify-content: center;
-        flex-wrap: nowrap;
-
-        > section{
-            max-width: 40%;
-            padding: 25px;
-        }
-
-        > section:nth-child(2n){
-            background-color:var(--blue);
-            color: white;
-    
-            a{
-                color: white;
+                // box-shadow: 10px 5px 10px black;
             }
-        }
-    
-        > section:nth-child(2n+1){
-            color: var(--blue);
-    
-            a{
-                color: var(--blue);
+
+            li{
+                margin-top: 10px;
+                margin-left: 7vw;
+                margin-right: 7vw;      
+                
+                color: var(--light);                
             }
+
+            #blue::before{
+                background-color: blue;
+            }
+        
+            #purple::before{
+                background-color: purple;
+            }
+        
+            #green::before{
+                background-color: green;
+            }
+        
+            #orange::before{
+                background-color: orange;
+            }        
         }
 
-        > section:first-child{
-            margin-left: 40px;
-        }
-
-        > section:last-child{
-            margin-right: 40px;
-        }
-
-        ul > li{
-            margin-left: 5vw;
+        > ul, p{
             margin-top: 20px;
-            list-style-type: circle;
+            margin-left: 2vw;
+
+            li{
+                list-style-type: disc;
+                margin-top: 10px;
+                margin-left: 5vw;
+                margin-right: 7vw;
+
+                color: var(--light);
+            }       
         }
 
-        h2{
-            margin: 0;
-            margin-left: 5px;
-        }
+        li::before{
+            display: inline-flex;
+            content: "";
+            margin-left: -22px;
+            margin-right: 5px;
+            width: 22px;
+            height: 22px;
+        }     
     }
 
-    @media only screen and (max-width: 900px){
+
+    /*  *   *   *   *   *   *   *   *   *   *   *   *   *
+                    Gestion de mes compétences
+    *   *   *   *   *   *   *   *   *   *   *   *   *   */
+    #competence{   
         .responsive{
-            position: relative;
-            display: inline;
-            flex-wrap: unset;
-            flex-direction: unset;
-            justify-content: unset;
+            justify-content: center;
+            flex-wrap: nowrap;
+
+            h2{
+                margin: 0;
+                margin-left: 5px;
+            }
+                        
+            ul > li{
+                margin-left: 5vw;
+                margin-top: 20px;
+                list-style-type: circle;
+            }
 
             > section{
-                max-width: none;
-                width: 328px;
-            }
-
-            > section:nth-child(2n + 1){
-                position: relative;
-                overflow: auto;
+                max-width: 40%;
+                padding: 25px;           
             }
 
             > section:nth-child(2n){
-                position: relative;
-                float: right;
-                margin-left: 100%;
+                background-color: var(--blue);
+                border-radius: 25px;
+
+                h2, li{
+                    color: var(--light);
+                }
             }
 
             > section:first-child{
-                margin-left: 0;
+                margin-left: 40px;
             }
-    
+
             > section:last-child{
-                margin-right: 0;
-            }            
+                margin-right: 40px;
+            }
         }
-    }     
-}
+
+        @media only screen and (max-width: 900px){
+            .responsive{
+                transition: all 1s ease-in;
+                position: relative;
+                display: inline;
+                flex-wrap: unset;
+                flex-direction: unset;
+                justify-content: unset;
+
+                > section{
+                    max-width: none;
+                    width: 328px;
+                }
+
+                > section:nth-child(2n + 1){
+                    position: relative;
+                    overflow: auto;
+                }
+
+                > section:nth-child(2n){
+                    position: relative;
+                    float: right;
+                    margin-left: 100%;
+                }
+
+                > section:first-child{
+                    margin-left: 0;
+                }
+        
+                > section:last-child{
+                    margin-right: 0;
+                }            
+            }
+        }     
+    }
 
 
-/*  *   *   *   *   *   *   *   *   *   *   *   *   *
-                Gestion de mes projets
-*   *   *   *   *   *   *   *   *   *   *   *   *   */
-#projets{
-    .responsive{
-        div{
-            display: flex;
-            flex-direction: column;
-            width: 280px;
-            height: 250px;
-            margin-top: 15px;
-            border: 2px solid white;
-            background-color: var(--blue);
-            color: white;
+    /*  *   *   *   *   *   *   *   *   *   *   *   *   *
+                    Gestion de mes projets
+    *   *   *   *   *   *   *   *   *   *   *   *   *   */
+    #projets{
+        .responsive{
+            align-items: center;
+            
+            div{
+                display: flex;
+                flex-direction: column;
+                width: 280px;
+                height: 250px;
+                border: 2px solid var(--dark);
+                margin: 25px;
+                justify-content: center;
+                align-content: center;
+                border-radius: 25px;
+                background-color: var(--light);
 
-            a{
-                display: table;
-                flex: 1;
+                a:first-child, a:first-child:hover{
+                    transition: border-top-left-radius none;
+                    transition: border-top-right-radius none;             
+                }
 
-                +a{
-                    border-top: 2px solid white;
-                } 
+                a:last-child, a:last-child:hover{
+                    transition: border-bottom-left-radius none;
+                    transition: border-bottom-right-radius none;
+
+                }
+
+                a{
+                    transition: background-color 0.5s ease-in, font-size 0.5s ease-in;
+                    background-color: var(--light);
+                    display: table;
+                    flex: 1;
+
+                    +a{
+                        border-top: 2px solid var(--dark);
+                    }
+                }
+
+                a:first-child{
+                    border-top-left-radius: 22px;
+                    border-top-right-radius: 22px;                    
+                }
+
+                a:last-child{
+                    border-bottom-left-radius: 22px;
+                    border-bottom-right-radius: 22px;
+                }
+
+                a:hover{
+                    transition: background-color 0.5s ease-out, font-size 0.5s ease-out;
+                    background-color: var(--grey);
+                    font-size: 25px;
+                    color: var(--light);
+
+                    p{
+                        color: var(--light);
+                    }
+                }
+
+                a:first-child:hover{
+                    border-top-left-radius: 22px;
+                    border-top-right-radius: 22px;
+                }
+
+                a:last-child:hover{
+                    border-bottom-left-radius: 22px;
+                    border-bottom-right-radius: 22px;
+                }
+
+                
+                p{
+                    padding: 0 10px;
+                    display: table-cell;
+                    font-weight: bold;
+                    text-align: center;
+                    vertical-align: middle;
+
+                    color: var(--dark);
+                }
             }
 
-            p{
-                padding: 0 10px;
-                display: table-cell;
-                font-weight: bold;
-                text-align: center;
-                vertical-align: middle;
-            }            
+            div.clickable{
+                a{
+                    box-shadow: 10px 5px 10px black;
+                }
+            }
         }
     }
 }

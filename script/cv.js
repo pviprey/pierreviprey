@@ -110,6 +110,109 @@ document.addEventListener("DOMContentLoaded", function() {
     mail.innerText = "viprey.pierre@gmail.com";
     document.getElementById("mail").insertAdjacentElement('beforeend', mail);
 
+    var partJson = {
+        "particles": {
+            "number": {
+            "value": 150,
+            "density": {
+                "enable": true,
+                "value_area": 500
+            }
+            },
+            "color": {
+            "value": "#3b5998"
+            },
+            "shape": {
+            "type": "circle",
+            "stroke": {
+                "width": 1,
+                "color": "#e8e6e3"
+            },
+            "polygon": {
+                "nb_sides": 5
+            },
+            "image": {
+                "src": "img/github.svg",
+                "width": 100,
+                "height": 100
+            }
+            },
+            "size": {
+            "value": 15,
+            "random": true,
+            "anim": {
+                "enable": false,
+                "speed": 40,
+                "size_min": 3,
+                "sync": false
+            }
+            },
+            "line_linked": {
+            "enable": true,
+            "distance": 110,
+            "color": "#3b5998",
+            "opacity": 255,
+            "width": 2.5
+            },
+            "move": {
+            "enable": true,
+            "speed": 0.7,
+            "direction": "none",
+            "random": false,
+            "straight": false,
+            "out_mode": "out",
+            "bounce": false,
+            "attract": {
+                "enable": false,
+                "rotateX": 600,
+                "rotateY": 1200
+            }
+            }
+        },
+        "interactivity": {
+            "detect_on": "canvas",
+            "events": {
+            "onhover": {
+                "enable": true,
+                "mode": "repulse"
+            },
+            "onclick": {
+                "enable": true,
+                "mode": "push"
+            },
+            "resize": true
+            },
+            "modes": {
+            "grab": {
+                "distance": 400,
+                "line_linked": {
+                "opacity": 1
+                }
+            },
+            "bubble": {
+                "distance": 400,
+                "size": 40,
+                "duration": 2,
+                "opacity": 8,
+                "speed": 3
+            },
+            "repulse": {
+                "distance": 35,
+                "duration": 2
+            },
+            "push": {
+                "particles_nb": 4
+            },
+            "remove": {
+                "particles_nb": 2
+            }
+            }
+        },
+        "retina_detect": true
+    };
+    var jsonUri = "data:text/plain;base64,"+window.btoa(JSON.stringify(partJson));    
+    particlesJS.load('particles-js', jsonUri, function() {
+    });
 
     /* Ajout de mes expériences */
     let tab_exp = [];
