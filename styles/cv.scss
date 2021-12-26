@@ -155,9 +155,11 @@ header{
         img#pdp{
             position: absolute;
             z-index: 2;
+            display: block;
 
-            width: 250px;
-            height: 250px;
+            max-width: 250px;
+            max-height: 250px;
+            object-fit: cover;
 
             top: 220px;
             left: calc(50% - 250px/2);
@@ -165,7 +167,8 @@ header{
             border: 7px solid var(--blue);
             border-radius: 100%;
 
-            background-color: violet;
+            background-color: var(--grey);
+            
         }
     }
 
