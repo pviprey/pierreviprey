@@ -149,10 +149,10 @@ document.addEventListener("DOMContentLoaded", function() {
             },
             "line_linked": {
             "enable": true,
-            "distance": 150,
+            "distance": 110,
             "color": "#3b5998",
-            "opacity": 0.4,
-            "width": 2
+            "opacity": 255,
+            "width": 2.5
             },
             "move": {
             "enable": true,
@@ -197,8 +197,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 "speed": 3
             },
             "repulse": {
-                "distance": 80,
-                "duration": 0.7
+                "distance": 35,
+                "duration": 2
             },
             "push": {
                 "particles_nb": 4
