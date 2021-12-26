@@ -2,10 +2,10 @@
 <html lang="fr">
     <head>
         <link href="styles/cv.css" rel="stylesheet">
-        <script src="jquery-3.5.1.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
         <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
         <script src="script/cv.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Orelega+One&family=Roboto:wght@500&display=swap');
         </style>
@@ -23,22 +23,24 @@
                 <a class="linkedin" href="https://www.linkedin.com/in/viprey-pierre/" target=”_blank”></a>
                 <a class="pdf" href="Pierre_Viprey-CV.pdf" target=”_blank”></a>
             </div>
+
             <div id="banniere">
-                <img src="images/wp6690890-neural-networks-wallpapers.jpg" height="350" alt="banniere">
-            </div>
-            <div class="separateur">
+                <div id="particles-js"></div>
                 <img id="pdp" src="" alt="My profile picture">
+                <div class="separateur"></div>
             </div>
+
             <div id="entete">
                 <p class="center" id="NomPrenom">VIPREY Pierre</p>
                 <p class="center" id="traits">curieux, à l'écoute, teamwork</p>
+
                 <aside class="left">
-                    <p id="adresse">Adresse: 20 avenue Léo Lagrange</p>
-                    <p id="ville">Besançon 25000</p>
-                    <p id="mail">Mail: <p>
+                    <p id="ville">Besançon (FRANCE)</p>
+                    <p id="mail"></p>
                 </aside>
+
                 <aside class="right">
-                    <p id="telephone">Téléphone: 0629764894</p>
+                    <p id="telephone">0629764894</p>
                     <p id="age">22 ans</p>
                     <p id="permis">Permis B</p>
                 </aside>
@@ -97,7 +99,7 @@
                     <section id=capacite>
                         <h2>Développement</h2>
                         <ul>
-                            <li>Web (HTML, CSS, SCSS, JS)</li>
+                            <li>HTML, CSS/SCSS, JS, Node</li>
                             <li>C/C++</li>
                             <li>Java</li>
                             <li>Tests unitaires</li>
@@ -119,16 +121,19 @@
             <section id="projets">
                 <h1>Mes réalisations</h1>
                 <div class="responsive">
-                    <div>
+                    <div class="clickable">
                         <a href="https://github.com/pviprey/les-josettes" target=”_blank”><p>Code source du site 'Les Josettes'</p></a>
                         <a href="https://lesjosettes-besancon.fr" target=”_blank”><p>Visuel du site</p></a>                        
                     </div>
-                    <div>
+
+                    <div class="clickable">
                         <a href="https://github.com/pviprey/pierreviprey" target=”_blank”><p>Code source de mon CV</p></a>
                     </div>
-                    <div>
+
+                    <div class="clickable">
                         <a href="https://github.com/pviprey/Anagramme" target=”_blank”><p>Code source d'un projet en C de recherche d'anagramme</p></a>
                     </div>
+
                     <div>
                         <p>Et bien plus encore...</p><p>- Conception de 3 lignes métrolitaines japonaises en Java avec ses tests unitaires.<br>- Création et gestion d'automates en C++ avec ses tests unitaires.<br>...</p>
                     </div>                    
