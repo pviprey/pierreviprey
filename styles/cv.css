@@ -84,6 +84,7 @@ li {
 *   *   *   *   *   *   *   *   *   *   *   *   *   */
 header {
   padding-bottom: 30px;
+  background-color: var(--light);
   /*  *   *   *   *   *   *   *   *   *   *   *   *   *   *   *
               Gestion des différents liens du bandeau         
   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   */
@@ -156,8 +157,11 @@ header {
       width: 50%; }
     header #entete #NomPrenom {
       font-size: 60px; }
-    header #entete #traits {
-      margin: 10px 0px 50px 0px; }
+    header #entete #traits, header #entete #stage {
+      margin-top: 10px; }
+    header #entete #stage {
+      font-size: 50px;
+      margin-bottom: 50px; }
 
 /*  *   *   *   *   *   *   *   *   *   *   *   *   *
                     Gestion du main

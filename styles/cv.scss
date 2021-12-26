@@ -92,6 +92,7 @@ li{
 *   *   *   *   *   *   *   *   *   *   *   *   *   */
 header{
     padding-bottom: 30px;
+    background-color: var(--light);
 
     /*  *   *   *   *   *   *   *   *   *   *   *   *   *   *   *
                 Gestion des différents liens du bandeau         
@@ -137,7 +138,6 @@ header{
     #banniere{
         height: 350px;
         margin-bottom: 100px;
-
         background-color: var(--grey);
 
         #particles-js{
@@ -206,8 +206,13 @@ header{
             font-size: 60px;
         }
 
-        #traits{
-            margin: 10px 0px 50px 0px;
+        #traits, #stage{
+            margin-top: 10px;
+        }
+
+        #stage{
+            font-size: 50px;
+            margin-bottom: 50px;
         }
     }
 }
