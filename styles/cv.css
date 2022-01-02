@@ -162,6 +162,14 @@ header {
     header #entete #stage {
       font-size: 50px;
       margin-bottom: 50px; }
+    header #entete #mail button {
+      font-size: 20px;
+      background-color: grey;
+      border: none;
+      border-radius: 5px;
+      padding: 5px; }
+    header #entete #mail button:hover {
+      cursor: pointer; }
 
 /*  *   *   *   *   *   *   *   *   *   *   *   *   *
                     Gestion du main
@@ -185,7 +193,7 @@ main {
   main > section {
     padding: 25px 0px; }
     main > section h1 {
-      margin-left: 5px;
+      margin-left: 10px;
       font-weight: bold;
       font-size: 45px;
       text-decoration: underline;
@@ -351,7 +359,7 @@ main {
         text-align: center;
         vertical-align: middle;
         color: var(--dark); }
-    main #projets .responsive div.clickable a {
+    main #projets .responsive div.clickable {
       box-shadow: 10px 5px 10px black; }
 
 /*# sourceMappingURL=cv.css.map */

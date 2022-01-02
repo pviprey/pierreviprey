@@ -104,11 +104,17 @@ function fill_canvas(tab_exp){
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    /* Ajout de ma boite mail */
-    let mail = document.createElement("a");
-    mail.href = "mailto:viprey.pierre@gmail.com";
-    mail.innerText = "viprey.pierre@gmail.com";
-    document.getElementById("mail").insertAdjacentElement('beforeend', mail);
+
+    let mail = document.getElementById("mail");
+    /* Affichage de ma boite mail */
+    mail.addEventListener("click", function() {
+        mail.innerHTML = '';
+        let lien = document.createElement("a");
+        lien.href = "mailto:viprey.pierre@gmail.com";
+        lien.innerText = "viprey.pierre@gmail.com";
+        mail.insertAdjacentElement('beforeend', lien);
+    });
+
 
     var partJson = {
         "particles": {

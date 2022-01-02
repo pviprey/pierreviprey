@@ -214,6 +214,20 @@ header{
             font-size: 50px;
             margin-bottom: 50px;
         }
+
+        #mail{
+            button{
+                font-size: 20px;
+                background-color: grey;
+                border: none;
+                border-radius: 5px;
+                padding: 5px;
+            }
+
+            button:hover{
+                cursor: pointer;
+            }
+        }
     }
 }
 
@@ -226,7 +240,7 @@ main{
         padding: 25px 0px;
 
         h1{
-            margin-left: 5px;
+            margin-left: 10px;
 
             font-weight: bold;
             font-size: 45px;
@@ -528,9 +542,7 @@ main{
             }
 
             div.clickable{
-                a{
-                    box-shadow: 10px 5px 10px black;
-                }
+                box-shadow: 10px 5px 10px black;
             }
         }
     }
