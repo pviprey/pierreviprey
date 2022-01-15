@@ -111,8 +111,7 @@ header {
     header #bandeau a.linkedin {
       background-image: url(../images/LinkedIn-Mark-64px.png);
       background-size: contain; }
-    header #bandeau .pdf {
-      right: 0;
+    header #bandeau a.pdf {
       background-image: url(../images/Pdf.png);
       background-size: contain;
       background-repeat: no-repeat; }
