@@ -6,7 +6,9 @@
         <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
         <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-        <script defer data-domain="pviprey.github.io/pierreviprey" src="https://plausible.nathanaelhoun.fr/js/script.outbound-links.js"></script>        
+        <!-- jsPDF library -->
+        <script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script>        
+        <script defer data-domain="pviprey.github.io/pierreviprey" src="https://plausible.nathanaelhoun.fr/js/script.outbound-links.js"></script>
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Orelega+One&family=Roboto:wght@500&display=swap');
         </style>
@@ -17,12 +19,13 @@
         <title>CV Pierre Viprey</title>
     </head>
 
-    <body>
+    <body id="content">
         <header>
             <div id="bandeau">
                 <a class="github" href="https://github.com/pviprey" target=”_blank”></a>
                 <a class="linkedin" href="https://www.linkedin.com/in/viprey-pierre/" target=”_blank”></a>
-                <a class="pdf" href="Pierre_Viprey-CV.pdf" target=”_blank”></a>
+                <!-- <a id="pdf" target=”_blank”></a> -->
+                <a id="pdf" href="Pierre_Viprey-CV.pdf" target=”_blank”></a>
             </div>
 
             <div id="banniere">
@@ -34,7 +37,7 @@
             <div id="entete">
                 <p class="center" id="NomPrenom">VIPREY Pierre</p>
                 <p class="center" id="traits">curieux, à l'écoute, teamwork</p>
-                <p class="center" id="stage">Étudiant à la recherche d'un stage</p>
+                <!-- <p class="center" id="stage">Étudiant à la recherche d'un stage</p> -->
 
                 <aside class="left">
                     <p id="ville">Besançon</p>
@@ -43,25 +46,16 @@
 
                 <aside class="right">
                     <p id="telephone">0629764894</p>
-                    <p id="age">22 ans</p>
+                    <p id="age">23 ans</p>
                     <p id="permis">Permis B</p>
                 </aside>
             </div>
         </header>
         <main>
-            <section id="bio">
-                <!-- <h1>Recherche un stage</h1> -->
-                <div  class="quote">
-                    <p>Étudiant à l'Université de Bourgogne-Franche-comté en Informatique, mon appétence naturelle se porte vers le secteur du web et l'exploitation de data. À ce jour, je recherche un stage de 3eme année me permettant de découvrir et d'apprendre avant de me spécialiser pour mon Master. Pour cela, en complément des domaines précédemments listés, je suis ouvert et curieux de découvrir votre secteur.</p>
-                    <p>La période de stage s'étend du 4 avril 2022 au 24 juin 2022 avec une possibilité d'avenant allant jusqu'à fin Aout.</p>
-                </div>
-            </section>
-
             <section id="propos">
                 <h1>À propos de moi</h1>
-                <p>Je m'initie à la programmation sur ma <a href="https://web.archive.org/web/20171103114255/https://www.planet-casio.com/Fr/forums/topic14841-1-difficultes-de-programmation-sur-un-test-de-nombre-premier.html" target=_blank>Casio Graph 35+E</a> dans le cadre de mes cours de maths en 1ere de lycée. J'y ai découvert un univers vaste, en constante évolution et créatif de solutions qui m'a plu et m'incitera à choisir une Licence d'Informatique.</p>
-                <p>Je m’intéresse beaucoup aux sports automobiles et à la compétition qui en découle. J'y découvre en particulier des technologies avant-gardistes qui façonneront nos quotidiens et nos modes de consommations et ceux, bien au delà du prisme de l'automobile.</p>
-                <p>Intéressé par la visualisation de data, j'apprécie, sur mes temps libres, de réaliser des graphiques ou des visuels à propos de sujets qui m'interpellent et d'en suivre l'actualité.</p>
+                <p>Je suis en alternance à l'Université de Bourgogne-Franche-comté en 1ere année de Master Informatique, mon appétence naturelle se porte vers le secteur du web.</p>
+                <p>Je m’intéresse beaucoup aux sports automobiles comme la Formule 1. J’y apprécie la très forte compétition et la constance évolution des voitures.</p>
             </section>
 
             <section id="experience">
@@ -70,19 +64,20 @@
                     <canvas id="cvs"></canvas>
 
                     <ul>
-                        <li id="blue">Lycée Victor-Hugo Besançon: filière Scientifique option Maths (Mention: Assez-Bien)</li>
-                        <li id="purple">Université Bourgogne-Franche-comté: filière Informatique actuellement en 3eme année</li>
+                        <li id="blue">Filière Scientifique option Maths au lycée Victor-Hugo à Besançon (Baccalauréat mention: Assez-Bien)</li>
+                        <li id="purple">Licence Informatique à l'université de Bourgogne-Franche-comté à Besançon</li>
                         <li id="green">Joueur dans un projet d'équipe e-sport</li>
-                        <li id="orange">Membre de l'association bisontine 'Les Josettes' et développeur de leur site web.</li>
+                        <li id="orange">Membre de l'association bisontine 'Les Josettes' et développeur de leur site web</li>
+                        <li id="red">Master Alternance à l'université de Bourgogne-Franche-Comté dans l'entreprise <a href="https://skaizengroup.eu/" target=”_blank”>Skaizen Group</a></li>
                     </ul>
                 </div>
 
                 <p>Et également:</p>
                 <ul>
-                    <li>La nuit de l'info 2018, 2020, 2021</li>
-                    <li>"Piscine" de l'école 42 durant l'été 2018</li>
-                    <li>Été 2021: Intérim dans le secteur automobile et alimentaire en horaire d'équipe</li>
-                    <li>Septembre 2021 à ce jour: Vérification des pass sanitaires à l'entrée de l'EHPAD de Quingey (25440) chaque week-end.</li>
+                    <li>La nuit de l'info 2018, 2020, 2021, 2022</li>
+                    <li>Été 2020, Été 2021: Nombreuses missions d'intérim pendant mes vacances d'été</li>
+                    <li>Septembre 2021 à Février 2022: Job étudiant de vérification des pass sanitaires à l'entrée d'une EHPAD</li>
+                    <li>Avril 2022 à Juillet 2022: Stage de 3eme année chez <a href="https://skaizengroup.eu/" target=”_blank”>Skaizen Group</a></li>
                 </ul>
             </section>
 
@@ -93,8 +88,8 @@
                         <h2>Langues</h2>
                         <ul>
                             <li>Français: Langue maternelle</li>
-                            <li>Anglais: B2 - Utilisation avancée</li>
-                            <li>Allemand: A2 - Notion de lycée</li>
+                            <li>Anglais: C1 ou mieux - D'après le test de Linguaskill from Cambridge</li>
+                            <li>Allemand: A2 appris au lycée</li>
                         </ul>
                     </section>
 
@@ -102,18 +97,17 @@
                         <h2>Développement</h2>
                         <ul>
                             <li>HTML, CSS/SCSS, JS, Node</li>
-                            <li>C/C++</li>
-                            <li>Java</li>
+                            <li>PHP, SQL</li>
+                            <li>Angular, TS</li>
+                            <li>C/C++, Java</li>
                             <li>Tests unitaires</li>
-                            <li>PHP</li>
-                            <li>Python</li>
                         </ul>
                     </section>
 
                     <section id="qualite">
                         <h2>Savoir être</h2>
                         <ul>
-                            <li>De part mes expériences, j'ai intégré la communication comme un point essentiel du développement en équipe.</li>
+                            <li>Grace à mes expériences personelles et profesionnelles, j'ai intégré la communication comme un point essentiel du travail et du développement en équipe.</li>
                             <li>Mon sens de l'organisation me permet de répondre au mieux aux missions que l'on me confie.</li>
                         </ul>
                     </section>
@@ -124,20 +118,20 @@
                 <h1>Mes réalisations</h1>
                 <div class="responsive">
                     <div class="clickable">
-                        <a href="https://github.com/pviprey/les-josettes" target=”_blank”><p>Code source de l'association 'Les Josettes'</p></a>
-                        <a href="https://lesjosettes-besancon.fr" target=”_blank”><p>Visuel du site</p></a>                        
+                        <a href="https://github.com/pviprey/les-josettes" target=”_blank”><p>Repository GitHub de l'association 'Les Josettes'</p></a>
+                        <a href="https://pviprey.github.io/Les-Josettes/" target=”_blank”><p>Visuel du site (plus utilisé depuis)</p></a>
                     </div>
 
                     <div class="clickable">
-                        <a href="https://github.com/pviprey/pierreviprey" target=”_blank”><p>Code source de mon CV</p></a>
+                        <a href="https://github.com/pviprey/pierreviprey" target=”_blank”><p>Repository GitHub de mon CV</p></a>
                     </div>
 
                     <div class="clickable">
-                        <a href="https://github.com/pviprey/Automaton" target=”_blank”><p>Code source en C++ pour confectionner des automates suivant la théorie des langages</p></a>
+                        <a href="https://github.com/pviprey/Automaton" target=”_blank”><p>Repository GitHub d'un projet en C++ pour confectionner des automates suivant la théorie des langages</p></a>
                     </div>
 
                     <div>
-                        <p>Et bien plus encore...</p><p>- Conception de 3 lignes métropolitaines japonaises en Java avec ses tests unitaires.<br>- Création d'un outil de recherches d'anagrammes.<br>...</p>
+                        <p>Et bien plus encore...</p><p>- Affichage de 3 lignes métropolitaines japonaises en Java avec ses tests unitaires.<br>- Création d'un outil de recherches d'anagrammes avec une table de hashage.<br>...</p>
                     </div>                    
                 </div>
             </section>

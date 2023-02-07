@@ -67,7 +67,7 @@ p{
 
 a{
     font-style: italic;
-    text-decoration: 2px underline dotted;
+    text-decoration: none;
     color: var(--dark);
 }
 
@@ -123,7 +123,7 @@ header{
             background-size: contain;
         }
 
-        a.pdf{
+        a#pdf{
             background-image: url(../images/Pdf.png);
             background-size: contain;
             background-repeat: no-repeat;
@@ -236,10 +236,10 @@ header{
 *   *   *   *   *   *   *   *   *   *   *   *   *   */
 main{
     > section{
-        padding: 25px 0px;
+        padding: 20px 0px;
 
         h1{
-            margin-left: 10px;
+            margin-left: 40px;
 
             font-weight: bold;
             font-size: 45px;
@@ -259,7 +259,7 @@ main{
     > section:nth-child(2n+1){
         background-color: var(--blue);
 
-        h1, h2, p{
+        h1, h2, p, li, a{
             color: var(--light);
         }
     }
@@ -267,7 +267,7 @@ main{
     > section:nth-child(2n){
         background-color: var(--light);
 
-        h1, h2, p{
+        h1, h2, p, li, a{
             color: var(--dark);
         }
     }    
@@ -331,8 +331,6 @@ main{
                 margin-top: 10px;
                 margin-left: 7vw;
                 margin-right: 7vw;      
-                
-                color: var(--light);                
             }
 
             #blue::before{
@@ -349,7 +347,10 @@ main{
         
             #orange::before{
                 background-color: orange;
-            }        
+            }
+            #red::before{
+                background-color: red;
+            }       
         }
 
         > ul, p{
@@ -361,8 +362,6 @@ main{
                 margin-top: 10px;
                 margin-left: 5vw;
                 margin-right: 7vw;
-
-                color: var(--light);
             }       
         }
 
@@ -407,6 +406,15 @@ main{
 
                 h2, li{
                     color: var(--light);
+                }
+            }
+
+            > section:nth-child(2n+1){
+                background-color: var(--light);
+                border-radius: 25px;
+
+                h2, li{
+                    color: var(--dark);
                 }
             }
 

@@ -2,7 +2,7 @@
 
 const START_YEAR = 2014;
 const NUM_YEAR = new Date().getFullYear();
-const DATE_LOAD = Date();
+const DATE_LOAD = new Date();
 
 class Coord{
     constructor(x, y){
@@ -12,8 +12,8 @@ class Coord{
 }
 
 class Experience{
-    constructor(experience, index, color, dateBegin, dateEnd = null){
-        this.experience = experience;
+    constructor(label, index, color, dateBegin, dateEnd = DATE_LOAD){
+        this.label = label;
         this.index = index;
         this.color = color;
         this.dateBegin = dateBegin;
@@ -49,6 +49,9 @@ function fill_canvas(tab_exp){
     }
 
     for(let event of tab_exp){
+        if(event.dateBegin > DATE_LOAD){
+            continue;
+        }
         ctx.shadowBlur = 0;
         let size = 50;
 
@@ -95,11 +98,14 @@ function fill_canvas(tab_exp){
             }
         }
         if($(document).width() < 650){
+            if(event.index == 0){
+                ctx.font = "30px helvetica"
+            }
             if(event.index == 1){
                 continue;
             }
         }        
-        ctx.fillText(event.experience, (positionEnd.x-positionBegin.x)/2+positionBegin.x, positionBegin.y+size/4);
+        ctx.fillText(event.label, (positionEnd.x-positionBegin.x)/2+positionBegin.x, positionBegin.y+size/4);
     }
 }
 
@@ -224,12 +230,15 @@ document.addEventListener("DOMContentLoaded", function() {
     let tab_exp = [];
     /* Lycee: Sept 2014 -> Juin 2017 */
     tab_exp.push(new Experience("Lycée", 0, "blue", new Date(2014, 8), new Date(2017, 5)));
-    /* Universite: Sept 2017 -> Now */
-    tab_exp.push(new Experience("Université", 0, "purple", new Date(2017, 8), new Date()));
+    /* Licence: Sept 2017 -> Juillet 2022 */
+    tab_exp.push(new Experience("Licence", 0, "purple", new Date(2017, 8), new Date(2022, 6)));
+    /* Master: Juillet 2022 -> Now */
+    tab_exp.push(new Experience("Master", 0, "red", new Date(2022, 8)));
+    
     /* CSGO Team: Sept 2018 -> Avril 2019 */
     tab_exp.push(new Experience("Projet", 1, "green", new Date(2018, 8), new Date(2019, 3)));
-    /* Les Josettes: Avril 2021 -> Now */
-    tab_exp.push(new Experience("Association", 1, "orange", new Date(2021, 3), new Date()));
+    /* Les Josettes: Avril 2021 -> Septembre 2022 */
+    tab_exp.push(new Experience("Association", 1, "orange", new Date(2021, 3), new Date(2022, 8)));
 
     fill_canvas(tab_exp);
 

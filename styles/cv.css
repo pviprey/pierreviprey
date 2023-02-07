@@ -64,7 +64,7 @@ p {
 
 a {
   font-style: italic;
-  text-decoration: 2px underline dotted;
+  text-decoration: none;
   color: var(--dark); }
 
 .responsive {
@@ -111,7 +111,7 @@ header {
     header #bandeau a.linkedin {
       background-image: url(../images/LinkedIn-Mark-64px.png);
       background-size: contain; }
-    header #bandeau a.pdf {
+    header #bandeau a#pdf {
       background-image: url(../images/Pdf.png);
       background-size: contain;
       background-repeat: no-repeat; }
@@ -190,9 +190,9 @@ main {
                   Gestion de mes projets
   *   *   *   *   *   *   *   *   *   *   *   *   *   */ }
   main > section {
-    padding: 25px 0px; }
+    padding: 20px 0px; }
     main > section h1 {
-      margin-left: 10px;
+      margin-left: 40px;
       font-weight: bold;
       font-size: 45px;
       text-decoration: underline;
@@ -205,11 +205,11 @@ main {
       margin-bottom: 13px; }
   main > section:nth-child(2n+1) {
     background-color: var(--blue); }
-    main > section:nth-child(2n+1) h1, main > section:nth-child(2n+1) h2, main > section:nth-child(2n+1) p {
+    main > section:nth-child(2n+1) h1, main > section:nth-child(2n+1) h2, main > section:nth-child(2n+1) p, main > section:nth-child(2n+1) li, main > section:nth-child(2n+1) a {
       color: var(--light); }
   main > section:nth-child(2n) {
     background-color: var(--light); }
-    main > section:nth-child(2n) h1, main > section:nth-child(2n) h2, main > section:nth-child(2n) p {
+    main > section:nth-child(2n) h1, main > section:nth-child(2n) h2, main > section:nth-child(2n) p, main > section:nth-child(2n) li, main > section:nth-child(2n) a {
       color: var(--dark); }
   main #bio .quote p:first-child::before {
     content: "« "; }
@@ -236,8 +236,7 @@ main {
   main #experience #limit li {
     margin-top: 10px;
     margin-left: 7vw;
-    margin-right: 7vw;
-    color: var(--light); }
+    margin-right: 7vw; }
   main #experience #limit #blue::before {
     background-color: blue; }
   main #experience #limit #purple::before {
@@ -246,6 +245,8 @@ main {
     background-color: green; }
   main #experience #limit #orange::before {
     background-color: orange; }
+  main #experience #limit #red::before {
+    background-color: red; }
   main #experience > ul, main #experience p {
     margin-top: 20px;
     margin-left: 2vw; }
@@ -253,8 +254,7 @@ main {
       list-style-type: disc;
       margin-top: 10px;
       margin-left: 5vw;
-      margin-right: 7vw;
-      color: var(--light); }
+      margin-right: 7vw; }
   main #experience li::before {
     display: inline-flex;
     content: "";
@@ -280,6 +280,11 @@ main {
       border-radius: 25px; }
       main #competence .responsive > section:nth-child(2n) h2, main #competence .responsive > section:nth-child(2n) li {
         color: var(--light); }
+    main #competence .responsive > section:nth-child(2n+1) {
+      background-color: var(--light);
+      border-radius: 25px; }
+      main #competence .responsive > section:nth-child(2n+1) h2, main #competence .responsive > section:nth-child(2n+1) li {
+        color: var(--dark); }
     main #competence .responsive > section:first-child {
       margin-left: 40px; }
     main #competence .responsive > section:last-child {
