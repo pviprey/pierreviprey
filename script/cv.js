@@ -121,7 +121,7 @@ document.addEventListener("DOMContentLoaded", function() {
         mail.insertAdjacentElement('beforeend', lien);
     });
 
-    let tel = document.getElementById("tel");
+    let tel = document.getElementById("telephone");
     /* Affichage de mon numéro de téléphone */
     tel.addEventListener("click", function() {
         tel.innerHTML = '';
