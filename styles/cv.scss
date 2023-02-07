@@ -66,7 +66,7 @@ p{
 }
 
 a{
-    font-style: italic;
+    font-style: oblique;
     text-decoration: none;
     color: var(--dark);
 }
@@ -214,16 +214,14 @@ header{
             margin-bottom: 50px;
         }
 
-        #mail{
-            button{
-                font-size: 20px;
-                background-color: grey;
-                border: none;
-                border-radius: 5px;
-                padding: 5px;
-            }
+        button.reveal{
+            font-size: 20px;
+            background-color: grey;
+            border: none;
+            border-radius: 5px;
+            padding: 5px;
 
-            button:hover{
+            &:hover{
                 cursor: pointer;
             }
         }

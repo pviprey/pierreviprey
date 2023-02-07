@@ -121,6 +121,15 @@ document.addEventListener("DOMContentLoaded", function() {
         mail.insertAdjacentElement('beforeend', lien);
     });
 
+    let tel = document.getElementById("tel");
+    /* Affichage de mon numéro de téléphone */
+    tel.addEventListener("click", function() {
+        tel.innerHTML = '';
+        let lien = document.createElement("a");
+        lien.href = "tel:+33629764894";
+        lien.innerText = "06 29 76 48 94";
+        tel.insertAdjacentElement('beforeend', lien);
+    });
 
     var partJson = {
         "particles": {

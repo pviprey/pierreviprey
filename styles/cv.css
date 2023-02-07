@@ -63,7 +63,7 @@ p {
   --dark: rgb(32, 34, 36); }
 
 a {
-  font-style: italic;
+  font-style: oblique;
   text-decoration: none;
   color: var(--dark); }
 
@@ -161,14 +161,14 @@ header {
     header #entete #stage {
       font-size: 50px;
       margin-bottom: 50px; }
-    header #entete #mail button {
+    header #entete button.reveal {
       font-size: 20px;
       background-color: grey;
       border: none;
       border-radius: 5px;
       padding: 5px; }
-    header #entete #mail button:hover {
-      cursor: pointer; }
+      header #entete button.reveal:hover {
+        cursor: pointer; }
 
 /*  *   *   *   *   *   *   *   *   *   *   *   *   *
                     Gestion du main
