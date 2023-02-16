@@ -72,13 +72,13 @@ function fill_canvas(tab_exp){
         let positionEnd = new Coord(size_year/2 + (yearEnd - START_YEAR)*size_year + monthEnd/11*size_year, HEIGHT/2 + (size+20)*event.index);
 
         if(event.dateEnd == DATE_TODAY){
-            positionEnd.x -= size*0.1;
+            positionEnd.x -= size*0.3;
             ctx.beginPath();
             ctx.fillStyle = event.color;
 
             ctx.moveTo(positionBegin.x, positionBegin.y+size/2);
             ctx.lineTo(positionEnd.x, positionEnd.y+size/2);
-            ctx.lineTo(positionEnd.x+size/2, positionEnd.y);
+            ctx.lineTo(positionEnd.x+size*0.3, positionEnd.y);
             ctx.lineTo(positionEnd.x, positionEnd.y-size/2);
             ctx.lineTo(positionBegin.x, positionBegin.y-size/2);
 
