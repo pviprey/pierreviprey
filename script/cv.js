@@ -2,7 +2,7 @@
 
 const START_YEAR = 2014;
 const NUM_YEAR = new Date().getFullYear();
-const DATE_LOAD = new Date();
+const DATE_TODAY = new Date();
 
 class Coord{
     constructor(x, y){
@@ -12,7 +12,7 @@ class Coord{
 }
 
 class Experience{
-    constructor(label, index, color, dateBegin, dateEnd = DATE_LOAD){
+    constructor(label, index, color, dateBegin, dateEnd = DATE_TODAY){
         this.label = label;
         this.index = index;
         this.color = color;
@@ -35,7 +35,15 @@ function fill_canvas(tab_exp){
         let year = START_YEAR + i;
         ctx.textAlign = "center";
         ctx.fillStyle = "black";
-        ctx.font = "2.3vh helvetica";
+        ctx.font = "25px helvetica";
+        if($(document).width() < 950){
+            ctx.font = "20px helvetica";
+        }
+        if($(document).width() < 650){
+            if(i%2 == 0){
+                ctx.font = "0px helvetica";
+            }
+        }
         let position = new Coord(size_year/2+size_year*i, 30);
         ctx.fillText(year, position.x, position.y);
 
@@ -49,7 +57,7 @@ function fill_canvas(tab_exp){
     }
 
     for(let event of tab_exp){
-        if(event.dateBegin > DATE_LOAD){
+        if(event.dateBegin > DATE_TODAY){
             continue;
         }
         ctx.shadowBlur = 0;
@@ -63,8 +71,8 @@ function fill_canvas(tab_exp){
         let yearEnd = event.dateEnd.getFullYear();
         let positionEnd = new Coord(size_year/2 + (yearEnd - START_YEAR)*size_year + monthEnd/11*size_year, HEIGHT/2 + (size+20)*event.index);
 
-        if(event.dateEnd == DATE_LOAD){
-            positionEnd.x -=size/2;
+        if(event.dateEnd == DATE_TODAY){
+            positionEnd.x -= size*0.1;
             ctx.beginPath();
             ctx.fillStyle = event.color;
 
@@ -98,13 +106,9 @@ function fill_canvas(tab_exp){
             }
         }
         if($(document).width() < 650){
-            if(event.index == 0){
-                ctx.font = "30px helvetica"
-            }
-            if(event.index == 1){
-                continue;
-            }
-        }        
+            ctx.font = "0px helvetica";
+        }
+
         ctx.fillText(event.label, (positionEnd.x-positionBegin.x)/2+positionBegin.x, positionBegin.y+size/4);
     }
 }

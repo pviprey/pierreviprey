@@ -273,7 +273,7 @@ main {
       margin-top: 20px;
       list-style-type: circle; }
     main #competence .responsive > section {
-      max-width: 40%;
+      max-width: 35%;
       padding: 25px; }
     main #competence .responsive > section:nth-child(2n) {
       background-color: var(--blue);

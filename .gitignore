@@ -1,6 +1,7 @@
 *.odt
 .~lock*
 images/Github-Mark-64*
+images/*-CNI.jpeg
 /styles/.sass-cache
 /styles/*.map
 /styles/*.sh
