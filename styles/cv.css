@@ -159,7 +159,8 @@ header {
     header #entete #traits, header #entete #stage {
       margin-top: 10px; }
     header #entete #stage {
-      font-size: 50px;
+      font-size: 30px;
+      font-weight: 700;
       margin-bottom: 50px; }
     header #entete button.reveal {
       font-size: 20px;
