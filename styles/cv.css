@@ -309,6 +309,7 @@ main #experience > ul, main #experience p {
 main #experience > ul li, main #experience p li {
   list-style-type: disc;
   margin-left: 5vw;
+  margin-right: 7vw;
 }
 main #experience li::before {
   display: inline-flex;
