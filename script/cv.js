@@ -1,6 +1,6 @@
 "use strict";
 
-const START_YEAR = 2014;
+const START_YEAR = 2017;
 const NUM_YEAR = new Date().getFullYear();
 const DATE_TODAY = new Date();
 
@@ -241,13 +241,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
     /* Ajout de mes expériences */
     let tab_exp = [];
-    /* Lycee: Sept 2014 -> Juin 2017 */
-    tab_exp.push(new Experience("Lycée", 0, "blue", new Date(2014, 8), new Date(2017, 5)));
     /* Licence: Sept 2017 -> Juillet 2022 */
     tab_exp.push(new Experience("Licence", 0, "purple", new Date(2017, 8), new Date(2022, 6)));
+    /* Master: Juillet 2022 -> Aout 2023 */
+    tab_exp.push(new Experience("Master", 0, "red", new Date(2022, 8), new Date(2023, 8)));
     /* Master: Juillet 2022 -> Now */
-    tab_exp.push(new Experience("Master", 0, "red", new Date(2022, 8)));
-    
+    tab_exp.push(new Experience("Mastere", 0, "blue", new Date(2023, 9)));
+
     /* CSGO Team: Sept 2018 -> Avril 2019 */
     tab_exp.push(new Experience("Projet", 1, "green", new Date(2018, 8), new Date(2019, 3)));
     /* Les Josettes: Avril 2021 -> Septembre 2022 */
