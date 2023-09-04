@@ -32,7 +32,7 @@ footer, header, hgroup, menu, nav, section {
 
 body {
   font-family: sans-serif;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   line-height: 1;
 }
 
@@ -196,7 +196,7 @@ header #entete #stage {
   margin: 30px 20px;
 }
 header #entete button.reveal {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   background-color: grey;
   border: none;
   border-radius: 5px;
@@ -232,7 +232,7 @@ main > section {
 main > section h1 {
   margin-left: 40px;
   font-weight: bold;
-  font-size: 2.2rem;
+  font-size: 2rem;
   text-decoration: underline;
   margin-bottom: 20px;
 }
