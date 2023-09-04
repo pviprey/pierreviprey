@@ -326,31 +326,33 @@ main{
 
                 // box-shadow: 10px 5px 10px black;
             }
+            ul{
+                li{
+                    margin-top: 10px;
+                    margin-left: 7vw;
+                    margin-right: 7vw;
 
-            li{
-                margin-top: 10px;
-                margin-left: 7vw;
-                margin-right: 7vw;      
-            }
+                    &#blue::before{
+                        background-color: blue;
+                    }
+                
+                    &#purple::before{
+                        background-color: purple;
+                    }
+                
+                    &#green::before{
+                        background-color: green;
+                    }
+                
+                    &#orange::before{
+                        background-color: orange;
+                    }
 
-            #blue::before{
-                background-color: blue;
+                    &#red::before{
+                        background-color: red;
+                    }
+                }
             }
-        
-            #purple::before{
-                background-color: purple;
-            }
-        
-            #green::before{
-                background-color: green;
-            }
-        
-            #orange::before{
-                background-color: orange;
-            }
-            #red::before{
-                background-color: red;
-            }       
         }
 
         > ul, p{
@@ -359,9 +361,7 @@ main{
 
             li{
                 list-style-type: disc;
-                margin-top: 10px;
                 margin-left: 5vw;
-                margin-right: 7vw;
             }       
         }
 

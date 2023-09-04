@@ -1,8 +1,8 @@
 "use strict";
 
 const START_YEAR = 2017;
-const NUM_YEAR = new Date().getFullYear();
 const DATE_TODAY = new Date();
+const NUM_YEAR = DATE_TODAY.getFullYear();
 
 class Coord{
     constructor(x, y){

@@ -282,24 +282,24 @@ main #experience #limit canvas {
   border: 2px solid var(--dark);
   border-radius: 25px;
 }
-main #experience #limit li {
+main #experience #limit ul li {
   margin-top: 10px;
   margin-left: 7vw;
   margin-right: 7vw;
 }
-main #experience #limit #blue::before {
+main #experience #limit ul li#blue::before {
   background-color: blue;
 }
-main #experience #limit #purple::before {
+main #experience #limit ul li#purple::before {
   background-color: purple;
 }
-main #experience #limit #green::before {
+main #experience #limit ul li#green::before {
   background-color: green;
 }
-main #experience #limit #orange::before {
+main #experience #limit ul li#orange::before {
   background-color: orange;
 }
-main #experience #limit #red::before {
+main #experience #limit ul li#red::before {
   background-color: red;
 }
 main #experience > ul, main #experience p {
@@ -308,9 +308,7 @@ main #experience > ul, main #experience p {
 }
 main #experience > ul li, main #experience p li {
   list-style-type: disc;
-  margin-top: 10px;
   margin-left: 5vw;
-  margin-right: 7vw;
 }
 main #experience li::before {
   display: inline-flex;
