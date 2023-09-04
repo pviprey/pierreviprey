@@ -32,7 +32,7 @@ footer, header, hgroup, menu, nav, section {
 
 body {
   font-family: sans-serif;
-  font-size: 18px;
+  font-size: 1.1rem;
   line-height: 1;
 }
 
@@ -184,19 +184,19 @@ header #entete aside {
   width: 50%;
 }
 header #entete #NomPrenom {
-  font-size: 60px;
+  font-size: 3.7rem;
 }
 header #entete #traits, header #entete #stage {
-  font-size: 30px;
+  font-size: 1.8rem;
   margin: 10px 0px;
 }
 header #entete #stage {
-  font-size: 30px;
+  font-size: 1.8rem;
   font-weight: 700;
   margin: 30px 20px;
 }
 header #entete button.reveal {
-  font-size: 20px;
+  font-size: 1.25rem;
   background-color: grey;
   border: none;
   border-radius: 5px;
@@ -232,13 +232,13 @@ main > section {
 main > section h1 {
   margin-left: 40px;
   font-weight: bold;
-  font-size: 35px;
+  font-size: 2.2rem;
   text-decoration: underline;
   margin-bottom: 20px;
 }
 main > section h2 {
   font-weight: bold;
-  font-size: 25px;
+  font-size: 1.6rem;
   text-decoration: underline;
   margin-left: 40px;
   margin-bottom: 13px;
@@ -321,25 +321,32 @@ main #experience li::before {
   height: 22px;
 }
 main #competence .responsive {
-  justify-content: center;
+  justify-content: space-evenly;
   flex-wrap: nowrap;
 }
 main #competence .responsive h2 {
   margin: 0;
   margin-left: 5px;
 }
-main #competence .responsive ul > li {
+main #competence .responsive > section {
+  max-width: 35%;
+  padding: 25px;
+  border: 2px solid;
+}
+main #competence .responsive > section ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+main #competence .responsive > section ul > li {
   margin-left: 5vw;
   margin-top: 20px;
   list-style-type: circle;
 }
-main #competence .responsive > section {
-  max-width: 35%;
-  padding: 25px;
-}
 main #competence .responsive > section:nth-child(2n) {
   background-color: var(--blue);
   border-radius: 25px;
+  border-color: var(--light);
 }
 main #competence .responsive > section:nth-child(2n) h2, main #competence .responsive > section:nth-child(2n) li {
   color: var(--light);
@@ -347,6 +354,7 @@ main #competence .responsive > section:nth-child(2n) h2, main #competence .respo
 main #competence .responsive > section:nth-child(2n+1) {
   background-color: var(--light);
   border-radius: 25px;
+  border-color: var(--blue);
 }
 main #competence .responsive > section:nth-child(2n+1) h2, main #competence .responsive > section:nth-child(2n+1) li {
   color: var(--dark);
@@ -401,14 +409,6 @@ main #projets .responsive div {
   border-radius: 25px;
   background-color: var(--light);
 }
-main #projets .responsive div a:first-child, main #projets .responsive div a:first-child:hover {
-  transition: border-top-left-radius none;
-  transition: border-top-right-radius none;
-}
-main #projets .responsive div a:last-child, main #projets .responsive div a:last-child:hover {
-  transition: border-bottom-left-radius none;
-  transition: border-bottom-right-radius none;
-}
 main #projets .responsive div a {
   transition: background-color 0.5s ease-in, font-size 0.5s ease-in;
   background-color: var(--light);
@@ -417,6 +417,14 @@ main #projets .responsive div a {
 }
 main #projets .responsive div a + a {
   border-top: 2px solid var(--dark);
+}
+main #projets .responsive div a:first-child, main #projets .responsive div a:first-child:hover {
+  transition: border-top-left-radius none;
+  transition: border-top-right-radius none;
+}
+main #projets .responsive div a:last-child, main #projets .responsive div a:last-child:hover {
+  transition: border-bottom-left-radius none;
+  transition: border-bottom-right-radius none;
 }
 main #projets .responsive div a:first-child {
   border-top-left-radius: 22px;
@@ -429,7 +437,7 @@ main #projets .responsive div a:last-child {
 main #projets .responsive div a:hover {
   transition: background-color 0.5s ease-out, font-size 0.5s ease-out;
   background-color: var(--grey);
-  font-size: 20px;
+  font-size: 1.25rem;
   color: var(--light);
 }
 main #projets .responsive div a:hover p {
