@@ -245,7 +245,7 @@ document.addEventListener("DOMContentLoaded", function() {
     tab_exp.push(new Experience("Licence", 0, "purple", new Date(2017, 8), new Date(2022, 6)));
     /* Master: Juillet 2022 -> Aout 2023 */
     tab_exp.push(new Experience("Master", 0, "red", new Date(2022, 8), new Date(2023, 8)));
-    /* Master: Juillet 2022 -> Now */
+    /* Mastere: Juillet 2022 -> Now */
     tab_exp.push(new Experience("Mastere", 0, "blue", new Date(2023, 9)));
 
     /* CSGO Team: Sept 2018 -> Avril 2019 */
