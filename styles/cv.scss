@@ -452,21 +452,14 @@ main{
                     &:nth-child(2n + 1){
                         position: relative;
                         overflow: auto;
+                        margin-left: 1rem;
                     }
     
                     &:nth-child(2n){
                         position: relative;
                         float: right;
-                        margin-left: 100%;
+                        margin-right: 1rem;
                     }
-    
-                    &:first-child{
-                        margin-left: 0;
-                    }
-            
-                    &:last-child{
-                        margin-right: 0;
-                    } 
                 }           
             }
         }     

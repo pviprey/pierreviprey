@@ -105,7 +105,8 @@ function fill_canvas(tab_exp){
                 ctx.font = "30px helvetica"
             }
         }
-        if($(document).width() < 650){
+        
+        if($(document).width() < 650 || (positionEnd.x-positionBegin.x)/$(document).width() < 0.05){
             ctx.font = "0px helvetica";
         }
 
